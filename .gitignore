@@ -110,3 +110,7 @@ venv.bak/
 
 # Data folder
 DATA/ 
+
+# Incomplete
+Archive/
+MSc-project-notebooks/
