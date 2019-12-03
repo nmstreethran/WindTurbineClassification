@@ -369,7 +369,7 @@ TSWLatexianTemp*
 .vscode/
 
 # Data folder
-DATA/ 
+data/
 
 # Incomplete
 Archive/
