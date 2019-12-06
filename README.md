@@ -10,7 +10,7 @@ The files in this repository are modified and updated versions of my original su
 
 ## Table of contents <!-- omit in toc -->
 - [Abstract](#abstract)
-- [Description of files and folders](#description-of-files-and-folders)
+- [Files and folders](#files-and-folders)
 - [License](#license)
 
 ## Abstract
@@ -19,9 +19,11 @@ Maximising the economic effectiveness of a wind farm is essential in making wind
 
 ***Keywords***: wind turbine, classification algorithm, SCADA, fault detection, condition monitoring
 
-## Description of files and folders
+## Files and folders
 
-* [License](LICENSE.md)
+* [Jupyter notebooks](jupyter-notebooks/)
+* [Scripts](scripts/)
+* [Images](images/)
 
 ## License
 
