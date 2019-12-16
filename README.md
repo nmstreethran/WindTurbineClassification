@@ -4,7 +4,7 @@
 
 by Nithiya Streethran (nmstreethran at gmail dot com)
 
-Files from my master's thesis, completed between May and August 2017 at Heriot-Watt University. I have now released these files under open-source licenses, so that anyone interested can make use of them. Please refer to the [contributing guidelines](CONTRIBUTING.md) and [code of conduct](CODE_OF_CONDUCT.md) if you would like to contribute, or contact me if you have any questions.
+Files from my master's thesis, completed between May and August 2017 at Heriot-Watt University and Natural Power Consultants. I have now released these files under open-source licenses, so that anyone interested can make use of them. Please refer to the [contributing guidelines](CONTRIBUTING.md). **Unfortunately, the datasets are proprietary and I do not have the rights to release them to the public.**
 
 The files in this repository are modified and updated versions of my original submission. The original files can be viewed [here](https://github.com/nmstreethran/WindTurbineClassification/tree/b07072256df783c69c2736d1e38302d5df451887) ([v1.0.0](https://github.com/nmstreethran/WindTurbineClassification/releases/tag/v1.0.0)).
 
