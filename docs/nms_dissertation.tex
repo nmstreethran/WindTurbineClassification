@@ -58,6 +58,11 @@
 
 %% bibliography
 \usepackage[backend=biber,style=ieee,uniquename=init,giveninits,urldate=long]{biblatex}
+\usepackage{xpatch} % to remove empty parentheses if year not provided for @online
+\xpatchbibdriver{online}
+{\printtext[parens]{\usebibmacro{date}}}
+{\iffieldundef{year}{}{\printtext[parens]{\usebibmacro{date}}}}
+{}{}
 \renewbibmacro*{doi+eprint+url}{%
 % if DOI is not present, print eprint; if eprint is not present, print URL
 	\printfield{doi}%
@@ -71,6 +76,7 @@
 }
 \addbibresource{references.bib} % bibliography file
 
+%% contents and floats
 \renewcommand*\contentsname{Table of Contents}
 \usepackage[nottoc,notbib]{tocbibind} % adding lists to the toc
 \usepackage[font=small,labelfont=bf]{caption} % caption font size = small
@@ -123,6 +129,7 @@
 
     \mainmatter
     \input{introduction}
+    \input{methodology}
 
     \backmatter
     \chapter{References}
