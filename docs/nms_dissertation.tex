@@ -14,10 +14,10 @@
 %% define metadata
 \def \documenttitle {Specification of `normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms}
 \def \authorname {Nithiya M Streethran}
-\def \keywords {keyword}
+\def \keywords {wind turbine, classification algorithm, SCADA, fault detection, condition monitoring}
 \def \licenseurl {https://creativecommons.org/licenses/by/4.0/}
 \def \documentdate {25 August, 2017}
-\def \programme {MSc Renewable Energy Engineering}
+\def \programme {MSc in Renewable Energy Engineering}
 
 %% metadata and hyperlink setup
 \title{\textbf\documenttitle}
@@ -71,29 +71,34 @@
 }
 \addbibresource{references.bib} % bibliography file
 
+\renewcommand*\contentsname{Table of Contents}
+\usepackage[nottoc,notbib]{tocbibind} % adding lists to the toc
 \usepackage{pdflscape} % for changing page orientation
 
 %%%
 \begin{document}
 
+    \frontmatter
     \begin{titlepage}
         \hspace{0pt} % vertical centering
         \vfill % ^
         \centering % horizontal centering
         \huge\textbf\documenttitle
         \\[2cm]
-        \Large Dissertation for the Degree of MSc in Renewable Energy Engineering
+        \Large Dissertation for the Degree of \programme
         \\
         Heriot-Watt University
         \\[2cm]
-        \authorname \textsuperscript{1}
+        \authorname \textsuperscript{\,1, }*
         \\[.3cm]
         Supervisors: Dr Nick Bennett \textsuperscript{2} and Dr Iain Dinwoodie \textsuperscript{3}
         \\[.3cm]
         \large
-        \textsuperscript{1,2} School of Engineering and Physical Sciences, Heriot-Watt University, Edinburgh EH14 4AS, United Kingdom
+        \textsuperscript{1, 2} School of Engineering and Physical Sciences, Heriot-Watt University, Edinburgh EH14 4AS, United Kingdom
         \\
         \textsuperscript{3} Natural Power Consultants, Ltd., Stirling FK7 7XE, United Kingdom
+        \\[.3cm]
+        * Email: nmstreethran@gmail.com
         \\[2cm]
         \Large
         Submitted on \documentdate
@@ -103,10 +108,15 @@
         \hspace{0pt} % ^
     \end{titlepage}
 
-    % \maketitle
+    \input{abstract}
+
+    \tableofcontents
+
+    \mainmatter
     \input{introduction}
 
-    \chapter*{References}
+    \backmatter
+    \chapter{References}
     \printbibliography[heading=none]
 
 \end{document}
