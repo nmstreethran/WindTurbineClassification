@@ -91,6 +91,10 @@
 \makeatother
 \usepackage{pdflscape} % for changing page orientation
 \usepackage{subcaption} % subfigures
+\usepackage{chngcntr} % continuous numbering of floats and equations
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
 
 %%%
 \begin{document}
@@ -112,7 +116,7 @@
         \\[.3cm]
         \large
         \textsuperscript{1, 2} School of Engineering and Physical Sciences, Heriot-Watt University, Edinburgh EH14 4AS, United Kingdom
-        \\
+        \\[.1cm]
         \textsuperscript{3} Natural Power Consultants, Ltd., Stirling FK7 7XE, United Kingdom
         \\[.3cm]
         * Email: nmstreethran@gmail.com
@@ -136,8 +140,16 @@
     \input{discussion}
     \input{conclusion}
 
-    \backmatter
-    \chapter{References}
-    \printbibliography[heading=none]
+    % apply backmatter environment to references only
+    {
+        \backmatter
+        \chapter{References}
+        \printbibliography[heading=none]
+    }
+
+    \appendix
+    % use alphabetical chapter numbering for appendices
+    \renewcommand{\thechapter}{\Alph{chapter}}
+    \input{appendices}
 
 \end{document}
