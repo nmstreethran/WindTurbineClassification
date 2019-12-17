@@ -89,13 +89,16 @@ Prior to cross-validation, the features are normalised \cite{43P} to a scale of 
 
 A number of performance metrics are available on scikit-learn to assess classifier performance \cite{33M}. Precision is the ratio of true positives, \textit{tp} to the sum of \textit{tp} and false positives, \textit{fp}, as shown in Equation~\ref{eq1}. Equation~\ref{eq2} describes recall, which is the ratio of \textit{tp} to the sum of \textit{tp} and false negatives, \textit{fn} \cite{deRu15}. The F1 score, shown in Equation~\ref{eq3}, is the harmonic average of precision and recall \cite{Perfo}. The reason for not using accuracy is because it does not distinguish between \textit{tp} and true negatives, \textit{tn} \cite{Perfo,SASH}. The metrics compute the scores for each class individually which are averaged, taking into account the support, which is the number of data points belonging to each class in the test set, to produce the final weighted score. The higher the scores, the better the performance of the classifier. \textit{fp} and \textit{fn} both have costs \cite{Perfo}. However, it is unknown at the moment which is more important for this wind farm. Therefore, the optimisations will use the F1 score as the main performance metric. As these metrics are not supported for multilabel classification, the execution is performed in a loop for each label. This means for each turbine, each cross-validation fold will output one score for each label, producing 70 scores in total. These can then be averaged for each turbine or fault to produce a final score.
 
-\begin{equation}\label{eq1}
+\begin{equation}
+    \label{eq1}
     precision = \frac{tp}{tp + fp}
 \end{equation}
-\begin{equation}\label{eq2}
+\begin{equation}
+    \label{eq2}
     recall = \frac{tp}{tp + fn}
 \end{equation}
-\begin{equation}\label{eq3}
+\begin{equation}
+    \label{eq3}
     F1~score = 2 \times \frac{precision \times recall}{precision + recall}
 \end{equation}
 
