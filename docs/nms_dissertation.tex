@@ -73,6 +73,15 @@
 
 \renewcommand*\contentsname{Table of Contents}
 \usepackage[nottoc,notbib]{tocbibind} % adding lists to the toc
+\usepackage[font=small,labelfont=bf]{caption} % caption font size = small
+\usepackage{floatrow} % to modify float settings 
+\floatsetup[table]{capposition=top} % force table captions on top
+\usepackage{graphicx}
+\graphicspath{{../images/}}
+% set default figure placement
+\makeatletter
+\def\fps@figure{!htb}
+\makeatother
 \usepackage{pdflscape} % for changing page orientation
 
 %%%
@@ -107,10 +116,10 @@
         \vfill % vertical centering
         \hspace{0pt} % ^
     \end{titlepage}
-
     \input{abstract}
-
     \tableofcontents
+    \listoffigures
+    \listoftables
 
     \mainmatter
     \input{introduction}
