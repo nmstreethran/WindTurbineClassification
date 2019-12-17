@@ -12,26 +12,31 @@
 \allsectionsfont{\raggedright\normalfont\lato\bfseries} % ^ bold + sans serif section headings; aligned left
 
 %% define metadata
-\def \documenttitle {Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms}
+\def \documenttitle {Specification of `normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms}
 \def \authorname {Nithiya M Streethran}
 \def \keywords {keyword}
 \def \licenseurl {https://creativecommons.org/licenses/by/4.0/}
 \def \documentdate {25 August, 2017}
 \def \programme {MSc Renewable Energy Engineering}
 
-%% metadata setup
+%% metadata and hyperlink setup
 \title{\textbf\documenttitle}
 \author{\authorname}
 \date{\documentdate}
 \usepackage[hidelinks]{hyperref}
 \usepackage{hyperxmp}
 \hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=blue,
+    citecolor=blue,
     pdfauthor={\authorname},
     pdftitle={\documenttitle},
     pdfkeywords={\keywords},
     pdflicenseurl=\licenseurl,
     pdfproducer={xelatex}
 }
+\urlstyle{same} % don't use monospace font for urls
 
 %% header and footer
 \usepackage{fancyhdr} % for header and footer
@@ -51,13 +56,57 @@
 \fancyhead[LO]{\textit{\nouppercase{\leftmark}}} % Chapter title
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
+%% bibliography
+\usepackage[backend=biber,style=ieee,uniquename=init,giveninits,urldate=long]{biblatex}
+\renewbibmacro*{doi+eprint+url}{%
+% if DOI is not present, print eprint; if eprint is not present, print URL
+	\printfield{doi}%
+	\newunit\newblock%
+	\newunit\newblock%
+	\iffieldundef{doi}{%
+		\usebibmacro{eprint}%
+		\iffieldundef{eprint}{%
+			\usebibmacro{url+urldate}}}%
+	{}%
+}
+\addbibresource{references.bib} % bibliography file
+
 \usepackage{pdflscape} % for changing page orientation
-\usepackage{lipsum}
 
 %%%
 \begin{document}
 
-    \maketitle
+    \begin{titlepage}
+        \hspace{0pt} % vertical centering
+        \vfill % ^
+        \centering % horizontal centering
+        \huge\textbf\documenttitle
+        \\[2cm]
+        \Large Dissertation for the Degree of MSc in Renewable Energy Engineering
+        \\
+        Heriot-Watt University
+        \\[2cm]
+        \authorname \textsuperscript{1}
+        \\[.3cm]
+        Supervisors: Dr Nick Bennett \textsuperscript{2} and Dr Iain Dinwoodie \textsuperscript{3}
+        \\[.3cm]
+        \large
+        \textsuperscript{1,2} School of Engineering and Physical Sciences, Heriot-Watt University, Edinburgh EH14 4AS, United Kingdom
+        \\
+        \textsuperscript{3} Natural Power Consultants, Ltd., Stirling FK7 7XE, United Kingdom
+        \\[2cm]
+        \Large
+        Submitted on \documentdate
+        \\[.3cm]
+        Reformatted and recompiled on \today
+        \vfill % vertical centering
+        \hspace{0pt} % ^
+    \end{titlepage}
+
+    % \maketitle
     \input{introduction}
+
+    \chapter*{References}
+    \printbibliography[heading=none]
 
 \end{document}
