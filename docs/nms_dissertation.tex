@@ -1,6 +1,6 @@
 
-%% setup
-\documentclass[a4paper, 11pt, openany]{book}
+%% set-up
+\documentclass[a4paper,11pt,openany]{book}
 \emergencystretch 3em % avoid overfulls in right margin
 \usepackage[a4paper]{geometry}
 \geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm}
@@ -10,6 +10,7 @@
 \usepackage{lato} % sans serif font
 \usepackage{sectsty} % for setting frontmatter and section headings to sans serif
 \allsectionsfont{\raggedright\normalfont\lato\bfseries} % ^ bold + sans serif section headings; aligned left
+\usepackage{textcomp} % symbols
 
 %% define metadata
 \def \documenttitle {Specification of `normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms}
@@ -19,7 +20,7 @@
 \def \documentdate {25 August, 2017}
 \def \programme {MSc in Renewable Energy Engineering}
 
-%% metadata and hyperlink setup
+%% metadata and hyperlink set-up
 \title{\textbf\documenttitle}
 \author{\authorname}
 \date{\documentdate}
@@ -130,6 +131,9 @@
     \mainmatter
     \input{introduction}
     \input{methodology}
+    \input{results}
+    \input{discussion}
+    \input{conclusion}
 
     \backmatter
     \chapter{References}
