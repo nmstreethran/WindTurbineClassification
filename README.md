@@ -1,10 +1,10 @@
-**This repository is an archive of files. I am not working on this project at the moment.**
+**This repository is an archive of files. I am not working on this project at the moment. Please submit an [issue](https://github.com/nmstreethran/WindTurbineClassification/issues) if you have any comments.**
 
 **Unfortunately, the datasets are proprietary and I do not own the rights to distribute them to the public.**
 
 ---
 
-# Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms <!-- omit in toc -->
+# Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2875795.svg)](https://doi.org/10.5281/zenodo.2875795)
 
@@ -22,10 +22,6 @@ biber nms_dissertation.tex
 xelatex nms_dissertation.tex
 xelatex nms_dissertation.tex
 ```
-
-## Table of contents <!-- omit in toc -->
-- [Abstract](#abstract)
-- [License](#license)
 
 ## Abstract
 

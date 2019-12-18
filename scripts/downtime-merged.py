@@ -1,8 +1,12 @@
-#%% [markdown]
-# # Combining multiple csv files containing data into a single file
+#%%
+"""Merging downtime files
 
-#%% [markdown]
-# ## Downtime
+This script merges all four CSV files containing downtime data into
+a single CSV file. Two files are older datasets, and the other two
+are newer datasets. Both old and new datasets have most of their
+timestamps in common. This merging ensures the downtime data has the
+same range as the SCADA data, and removes incomplete rows.
+"""
 
 #%%
 # import libraries

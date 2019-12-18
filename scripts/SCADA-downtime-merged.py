@@ -1,8 +1,13 @@
-#%% [markdown]
-# # Combining multiple csv files containing data into a single file
+#%%
+"""Merging SCADA and downtime files
 
-#%% [markdown]
-# ## Merging SCADA and downtime
+This script merges the SCADA and downtime merged datasets produced
+in SCADA-merged.py and downtime-merged.py into a single CSV dataset.
+Some unnecessary columns and duplicate data were dropped in the
+process. The downtime categories act as labels for the SCADA data.
+Therefore, this merging also automates the labelling process needed
+to train classifiers for supervised learning.
+"""
 
 #%%
 # import libraries
@@ -122,8 +127,3 @@ merged = merged[[
 #%%
 # write final dataframe to csv
 merged.to_csv('data/SCADA_downtime_merged.csv', index=False)
-
-#%%
-# importing the new csv as a dataframe (encoding needs to be specified)
-# import pandas as pd
-# dfnew = pd.read_csv('data/SCADA_downtime_merged.csv', encoding="ISO-8859-1")

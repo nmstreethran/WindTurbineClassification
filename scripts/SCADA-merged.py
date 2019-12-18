@@ -1,8 +1,13 @@
-#%% [markdown]
-# # Combining multiple csv files containing data into a single file
+#%%
+"""Merging SCADA files
 
-#%% [markdown]
-# ## SCADA
+This script merges all four CSV files containing SCADA data into a
+single CSV file. Two files are older datasets, and the other two are
+newer datasets. The older datasets were found to have some errors in
+the rotor speed readings. Both old and new datasets have most of
+their timestamps in common. This merging replaces the old errorred
+data points with the new ones, and removes incomplete rows.
+"""
 
 #%%
 # import libraries
