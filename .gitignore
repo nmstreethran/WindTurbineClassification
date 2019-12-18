@@ -368,7 +368,7 @@ TSWLatexianTemp*
 *.code-workspace
 .vscode/
 
-# Data folder
+# Data
 data/
 
 # Archive
