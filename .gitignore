@@ -371,7 +371,8 @@ TSWLatexianTemp*
 # Data folder
 data/
 
-# Incomplete
-Archive/
-MSc-project-notebooks/
-Old/
+# Archive
+archive/
+
+# Draft
+draft/
