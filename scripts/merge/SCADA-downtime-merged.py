@@ -1,4 +1,4 @@
-#%%
+# %%
 """Merging SCADA and downtime files
 
 This script merges the SCADA and downtime merged datasets produced
@@ -9,29 +9,29 @@ Therefore, this merging also automates the labelling process needed
 to train classifiers for supervised learning.
 """
 
-#%%
+# %%
 # import libraries
 import pandas as pd
 
-#%%
+# %%
 # import downtime data
 dwntm = pd.read_csv('data/downtime_merged.csv',skip_blank_lines=True)
 
-#%%
+# %%
 # convert dtype object to datetime
 dwntm['timestamp_start'] = pd.to_datetime(dwntm['timestamp_start'])
 dwntm['timestamp_end'] = pd.to_datetime(dwntm['timestamp_end'])
 
-#%%
+# %%
 # round to nearest 10 min
 dwntm['timestamp_start'] = dwntm['timestamp_start'].dt.round('10min')
 dwntm['timestamp_end'] = dwntm['timestamp_end'].dt.round('10min')
 
-#%%
+# %%
 # calculate period
 dwntm['period'] = dwntm['timestamp_end'] - dwntm['timestamp_start']
 
-#%%
+# %%
 # downtime ranges to every ten minutes between start and end timestamps
 dwntm = pd.concat([pd.DataFrame({
     'timestamp': pd.date_range(
@@ -52,53 +52,53 @@ dwntm = pd.concat([pd.DataFrame({
         'workorder_id','comment'])
     for i, row in dwntm.iterrows()], ignore_index=True)
 
-#%%
+# %%
 # sort and drop duplicates for same timestamp and turbine
 dwntm = dwntm.sort_values(['timestamp', 'turbine_id', 'period'])
 dwntm = dwntm.drop_duplicates(['timestamp', 'turbine_id'], keep='first')
 
-#%%
+# %%
 # import SCADA
 scada = pd.read_csv('data/SCADA_merged.csv', skip_blank_lines=True)
 
-#%%
+# %%
 # drop unnecessary columns
 scada = scada.drop('ws_1', axis=1)
 scada = scada.drop('ws_2', axis=1)
 scada = scada.drop('wd_1', axis=1)
 scada = scada.drop('wd_2', axis=1)
 
-#%%
+# %%
 # convert timestamp to datetime
 scada['timestamp'] = pd.to_datetime(scada['timestamp'], dayfirst=True)
 
-#%%
+# %%
 # copy turbine id to new column
 scada['turbine_id'] = scada['turbine']
 
-#%%
+# %%
 # merge SCADA and downtime
 merged = pd.merge(scada, dwntm, how='outer')
 del scada, dwntm
 
-#%%
+# %%
 # drop downtime entries with no SCADA readings - in case of duplicates
 merged = merged.drop(
     merged[(merged['turbine_id'].notnull()) & (
     merged['turbine'].isnull())].index)
 
-#%%
+# %%
 # drop old turbine id column
 merged = merged.drop('turbine', axis=1)
 
-#%%
+# %%
 # list columns and their dtypes
 merged.dtypes
 
-#%% generate list of columns
+# %% generate list of columns
 list(merged.columns.values)
 
-#%%
+# %%
 # rearrange columns
 merged = merged[[
     'timestamp',
@@ -124,6 +124,6 @@ merged = merged[[
     'workorder_id',
     'comment']]
 
-#%%
+# %%
 # write final dataframe to csv
 merged.to_csv('data/SCADA_downtime_merged.csv', index=False)
