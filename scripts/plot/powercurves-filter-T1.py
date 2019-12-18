@@ -82,9 +82,9 @@ for (x, y) in list3:
     # outside 0 deg <= normal <= 3.5 deg
     def f2(c):
         if 0 <= c['pitch'] <= 3.5 or c['hours'] != 9999 or (
-            (c['pitch'] > 3.5 or c['pitch'] < 0) and
-            (c['ap_av'] <= (.1 * df2x['ap_av'].max()) or
-            c['ap_av'] >= (.9 * df2x['ap_av'].max()))):
+                (c['pitch'] > 3.5 or c['pitch'] < 0) and
+                (c['ap_av'] <= (.1 * df2x['ap_av'].max()) or
+                c['ap_av'] >= (.9 * df2x['ap_av'].max()))):
             return 'normal'
         else:
             return 'curtailed'
@@ -94,17 +94,17 @@ for (x, y) in list3:
     # operating wind speeds, power > 100 before cut-in, runtime < 600
     def f3(c):
         if c['hours'] == 9999 and (
-            (3 < c['ws_av'] < 25 and
-            (c['ap_av'] <= 0 or
-            c['runtime'] < 600 or
-            c['EnvironmentalCategory_id'] > 1 or
-            c['GridCategory_id'] > 1 or
-            c['InfrastructureCategory_id'] > 1 or
-            c['AvailabilityCategory_id'] == 2 or
-            12 <= c['TurbineCategory_id'] <= 15 or
-            21 <= c['TurbineCategory_id'] <= 22)) or
-            (c['ws_av'] < 3 and
-            c['ap_av'] > 100)):
+                (3 < c['ws_av'] < 25 and
+                (c['ap_av'] <= 0 or
+                c['runtime'] < 600 or
+                c['EnvironmentalCategory_id'] > 1 or
+                c['GridCategory_id'] > 1 or
+                c['InfrastructureCategory_id'] > 1 or
+                c['AvailabilityCategory_id'] == 2 or
+                12 <= c['TurbineCategory_id'] <= 15 or
+                21 <= c['TurbineCategory_id'] <= 22)) or
+                (c['ws_av'] < 3 and
+                c['ap_av'] > 100)):
             return 'unusual'
         else:
             return 'normal'

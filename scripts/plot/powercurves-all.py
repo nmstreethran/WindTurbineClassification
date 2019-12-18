@@ -59,9 +59,9 @@ for (x, y) in coord:
 # %%
 # normalise using feature scaling (all values in the range [0, 1])
 power_norm = (
-    power-power.min())/(power.max()-power.min())
+    power - power.min()) / (power.max() - power.min())
 power_norm.index = (
-    power.index-power.index.min())/(power.index.max()-power.index.min())
+    power.index - power.index.min()) / (power.index.max() - power.index.min())
 
 # %%
 # create new list for individual subplot titles
