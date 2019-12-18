@@ -3,7 +3,7 @@
 \documentclass[a4paper,11pt,openany]{book}
 \emergencystretch 3em % avoid overfulls in right margin
 \usepackage[a4paper]{geometry}
-\geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm}
+\geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,headheight=13.6pt}
 
 %% fonts
 \usepackage{ebgaramond-maths} % serif font with math support
@@ -144,6 +144,7 @@
     % to suppress chapter numbering
     {
         \backmatter
+        \input{acknowledgements}
         \chapter{References}
         \printbibliography[heading=none]
     }
