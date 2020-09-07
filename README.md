@@ -1,12 +1,12 @@
+# Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2875795.svg)](https://doi.org/10.5281/zenodo.2875795)
+
 **This repository is an archive of files. I am not working on this project at the moment. Please submit an [issue](https://github.com/nmstreethran/WindTurbineClassification/issues) if you have any comments.**
 
 **Unfortunately, the datasets are proprietary and I do not own the rights to distribute them to the public.**
 
 ---
-
-# Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2875795.svg)](https://doi.org/10.5281/zenodo.2875795)
 
 by Nithiya Streethran (nmstreethran at gmail dot com)
 
@@ -33,5 +33,5 @@ Maximising the economic effectiveness of a wind farm is essential in making wind
 
 Unless otherwise stated:
 
-- [Python scripts](scripts/), [Jupyter notebooks](jupyter-notebooks/) and any other form of code (e.g., shell scripts) in this repository are licensed under the [MIT License](https://opensource.org/licenses/MIT). [[Link to license file](license/LICENSE_code.md)]
-- the content, images and documentation are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/). [[Link to license file](license/LICENSE_content.md)]
+- Code and scripts are licensed under the [MIT License](https://opensource.org/licenses/MIT).
+- the content, images and documentation are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/).icense file](license/LICENSE_content.md)]
