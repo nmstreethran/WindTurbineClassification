@@ -10,9 +10,9 @@
 
 by Nithiya Streethran (nmstreethran at gmail dot com)
 
-An archive of files from my master's thesis, completed between May and August 2017 at Heriot-Watt University and Natural Power Consultants. The thesis can be viewed [here](docs/nms_dissertation.pdf).
+An archive of files from my master's dissertation, completed between May and August 2017 at Heriot-Watt University and Natural Power Consultants. The dissertation can be viewed [here](docs/nms_dissertation.pdf) [[download link](https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf)].
 
-The files in this repository are modified versions of my original submission. This has been done mainly to improve readability, and no major changes were made. The original files can be viewed [here](https://github.com/nmstreethran/WindTurbineClassification/tree/b07072256df783c69c2736d1e38302d5df451887) ([v1.0.0](https://github.com/nmstreethran/WindTurbineClassification/releases/tag/v1.0.0)).
+The files in this repository are modified versions of my original submission. This has been done mainly to format and improve readability; no major changes were made. The original files can be viewed [here](https://github.com/nmstreethran/WindTurbineClassification/tree/b07072256df783c69c2736d1e38302d5df451887) ([v1.0.0](https://github.com/nmstreethran/WindTurbineClassification/releases/tag/v1.0.0)).
 
 To compile the LaTeX document, use the following commands:
 
@@ -34,4 +34,4 @@ Maximising the economic effectiveness of a wind farm is essential in making wind
 Unless otherwise stated:
 
 - Code and scripts are licensed under the [MIT License](https://opensource.org/licenses/MIT).
-- the content, images and documentation are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/).icense file](license/LICENSE_content.md)]
+- the content, images and documentation are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/).
