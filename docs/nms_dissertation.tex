@@ -2,6 +2,9 @@
 % avoid overfulls in right margin
 \emergencystretch3em
 
+% set date format
+\usepackage[british]{datetime2}
+
 %% define metadata
 \def\documenttitle{Specification of \texorpdfstring{`}{'}normal' wind turbine
   operating behaviour for rapid anomaly detection: through the use of machine
@@ -9,7 +12,7 @@
 \def\authorname{Nithiya M Streethran}
 \def\keywords{wind turbine, classification algorithm, SCADA,
   fault detection, condition monitoring}
-\def\documentdate{August 25, 2017}
+\def\documentdate{25th August 2017}
 \def\programme{MSc in Renewable Energy Engineering}
 
 %% metadata and hyperlink set-up
@@ -24,7 +27,7 @@
 
 %% bibliography
 \usepackage[sorting=none,alldates=comp,useprefix=true,
-  giveninits=true,defernumbers=true]{biblatex}
+  giveninits=true,defernumbers=true,language=british]{biblatex}
 % remap software entries to online
 \DeclareBibliographyAlias{software}{online}
 % suppress shorthand values
