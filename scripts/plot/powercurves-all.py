@@ -6,7 +6,7 @@
 import pandas as pd
 import itertools
 
-# create dataframe from csv
+# create dataframe from CSV
 scada = pd.read_csv('data/SCADA_merged.csv', skip_blank_lines=True)
 
 # standard power curves
@@ -23,7 +23,7 @@ cols = power.columns.tolist()
 # create new list for individual subplot titles
 subplt = ['Power curve for turbine %s' % x for x in cols]
 
-# rename index name (x-axis title)
+# rename index (x-axis title)
 power.index.name = 'Wind speed (m/s)'
 
 # plotting all columns (i.e., turbines 1 to 25) in the same figure
@@ -48,7 +48,7 @@ power_norm.index = (
 # create new list for individual subplot titles
 subplt_norm = ['Normalised power curve for turbine %s' % x for x in cols]
 
-# rename index name
+# rename index
 power_norm.index.name = 'Wind speed'
 
 # plotting all columns (i.e., turbines 1 to 25) in the same figure

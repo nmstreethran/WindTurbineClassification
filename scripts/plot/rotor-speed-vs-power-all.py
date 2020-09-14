@@ -23,7 +23,7 @@ list1 = power.columns.tolist()
 list2 = [
     'Average active power vs. rotor speed for turbine %s' % x for x in list1]
 
-# rename index name
+# rename index
 power.index.name = 'Rotor speed (rpm)'
 
 # plotting all columns (i.e., turbines 1 to 25) in the same figure

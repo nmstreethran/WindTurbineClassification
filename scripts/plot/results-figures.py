@@ -117,13 +117,7 @@ d3 = d.groupby('fault', as_index=False)['f'].mean()
 d4 = d.groupby('fault', as_index=False)['f'].max()
 d5 = d.groupby('fault', as_index=False)['f'].min()
 
-x = np.array(list(range(1, 15)))
-y = np.array(d0['f1'])
-eh = np.array(d1['f1'])
-el = np.array(d2['f1'])
-y1 = np.array(d3['f'])
-eh1 = np.array(d4['f'])
-el1 = np.array(d5['f'])
+
 
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
 plt.errorbar(

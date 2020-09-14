@@ -82,7 +82,7 @@ for (x, y) in list3:
             return 'curtailed'
     df2x['curtailment'] = df2x.apply(f2, axis=1)
 
-    # filter unusual readings, i.e. for normal operation, power <= 0 in
+    # filter unusual readings, i.e., for normal operation, power <= 0 in
     # operating wind speeds, power > 100 before cut-in, runtime < 600
     def f3(c):
         if c['hours'] == 9999 and (

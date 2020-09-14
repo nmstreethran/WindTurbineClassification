@@ -370,7 +370,7 @@ p.columns = p.columns.droplevel(0)
 list6 = [
     'Power curve for turbine %s before cut-in' % x for x in list2]
 
-# rename index name
+# rename index
 p.index.name = 'Wind speed (m/s)'
 
 ax = p.plot(

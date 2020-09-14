@@ -6,7 +6,7 @@
 import pandas as pd
 import itertools
 
-# create dataframe from csv
+# create dataframe from CSV
 df = pd.read_csv('data/SCADA_merged.csv', skip_blank_lines=True)
 
 # create pivot table (new dataframe)
@@ -16,14 +16,14 @@ power = pd.pivot_table(
 # removing pivot table values name from heading
 power.columns = power.columns.droplevel(0)
 
-# list of column headers (i.e. turbines 1 to 25)
+# list of column headers (i.e., turbines 1 to 25)
 list1 = power.columns.tolist()
 
 # create new list for individual subplot titles
 list2 = [
     'Pitch angle vs. average active power for turbine %s' % x for x in list1]
 
-# rename index name
+# rename index
 power.index.name = 'Average active power (kW)'
 
 # plotting all columns (i.e., turbines 1 to 25) in the same figure
