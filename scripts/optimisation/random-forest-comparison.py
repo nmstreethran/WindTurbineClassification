@@ -91,9 +91,9 @@ for x in list1:
         dfx['curtailment'] = dfx.apply(f2, axis=1)
 
         # filter unusual readings, i.e., for normal operation, power <= 0 in
-        # operating wind speeds, power > 100 ...
+        # operating wind speeds, power > 100 before cut-in, runtime < 600 and
+        # other downtime categories
         def f3(c):
-            # before cut-in, runtime < 600 and other downtime categories
             if c['hours'] == 999 and ((
                         3 < c['ws_av'] < 25 and (
                             c['ap_av'] <= 0 or
