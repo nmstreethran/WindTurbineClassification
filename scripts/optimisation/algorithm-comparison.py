@@ -21,7 +21,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn import preprocessing
 
 # import data
-df = pd.read_csv('data/SCADA_and_downtime.csv', skip_blank_lines=True)
+df = pd.read_csv('data/SCADA_downtime_merged.csv', skip_blank_lines=True)
 
 # list of turbines to plot
 list1 = [1]
