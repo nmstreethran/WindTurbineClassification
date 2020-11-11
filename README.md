@@ -16,7 +16,7 @@ An archive of files from my master's dissertation, completed between May and Aug
 
 The files in this repository are modified versions of my original submission. This has been done mainly to format and improve readability; no major changes were made. The original files can be viewed [here](https://github.com/nmstreethran/WindTurbineClassification/tree/b07072256df783c69c2736d1e38302d5df451887) [[v1.0.0 archive](https://github.com/nmstreethran/WindTurbineClassification/releases/tag/v1.0.0)].
 
-To compile the LaTeX document, use the following commands:
+To compile the LaTeX document, use the following commands within the `docs` directory:
 
 ```sh
 xelatex nms_dissertation.tex
