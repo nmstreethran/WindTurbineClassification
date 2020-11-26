@@ -367,12 +367,9 @@ TSWLatexianTemp*
 # Visual Studio Code
 *.code-workspace
 .vscode/
+requirements.sh
 
-# Data
+# User folders
 data/
-
-# Archive
 archive/
-
-# Draft
 draft/

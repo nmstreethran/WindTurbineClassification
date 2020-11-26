@@ -187,7 +187,7 @@ print(classification_report(Y_validation, predictions1))
 df4['fault'] = df4['hours6'].astype(str)
 
 
-def f(c):
+def fx(c):
     if c['fault'] == '9999':
         return 'normal'
     elif c['fault'] == '0':
@@ -196,7 +196,7 @@ def f(c):
         return 'up to ' + c['fault'] + ' hr(s) before fault'
 
 
-df4['fault'] = df4.apply(f, axis=1)
+df4['fault'] = df4.apply(fx, axis=1)
 
 # visualising
 

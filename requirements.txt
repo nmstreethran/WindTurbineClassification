@@ -1,0 +1,15 @@
+imbalanced-learn
+matplotlib
+pandas
+# cycler # Installed as dependency for matplotlib
+# joblib # Installed as dependency for imbalanced-learn, scikit-learn
+# kiwisolver # Installed as dependency for matplotlib
+# numpy # Installed as dependency for scikit-learn, scipy, pandas, matplotlib, imbalanced-learn
+# pillow # Installed as dependency for matplotlib
+# pyparsing # Installed as dependency for matplotlib
+# python-dateutil # Installed as dependency for matplotlib, pandas
+# pytz # Installed as dependency for pandas
+# scikit-learn # Installed as dependency for imbalanced-learn
+# scipy # Installed as dependency for imbalanced-learn, scikit-learn
+# six # Installed as dependency for cycler, python-dateutil
+# threadpoolctl # Installed as dependency for scikit-learn
