@@ -118,7 +118,6 @@ d4 = d.groupby('fault', as_index=False)['f'].max()
 d5 = d.groupby('fault', as_index=False)['f'].min()
 
 
-
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
 plt.errorbar(
     x, y, linestyle='None', color='#098A63', marker='o', label='balanced')
