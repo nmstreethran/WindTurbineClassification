@@ -2,19 +2,21 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2875795.svg)](https://doi.org/10.5281/zenodo.2875795)
 
-**This repository is an archive of files. I am not working on this project at the moment. Please submit an [issue](https://github.com/nmstreethran/WindTurbineClassification/issues) if you have any comments.**
-
-**Unfortunately, the datasets are proprietary and I do not own the rights to distribute them to the public.**
-
----
-
 ***Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms***
 
 by Nithiya Streethran (nmstreethran at gmail dot com)
 
-An archive of files from my master's dissertation, completed between May and August 2017 at Heriot-Watt University and Natural Power Consultants. The dissertation can be viewed [here](docs/nms_dissertation.pdf) [[download](https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf)].
+## Description of files
 
-The files in this repository are modified versions of my original submission. This has been done mainly to format and improve readability; no major changes were made. The original files can be viewed [here](https://github.com/nmstreethran/WindTurbineClassification/tree/b07072256df783c69c2736d1e38302d5df451887) [[v1.0.0 archive](https://github.com/nmstreethran/WindTurbineClassification/releases/tag/v1.0.0)].
+This repository is an archive of files created for my master's dissertation, which was completed between May and August 2017 at Heriot-Watt University and Natural Power Consultants. This was also my very first Python project. Unsurprisingly, these files needed some formatting to improve readability, which did after graduating with a master's degree in Renewable Energy Engineering. I did not make any major changes to the code, so this repository still contains a bunch of standalone scripts and not a package.
+
+The `current` branch has the formatted code and dissertation files. The dissertation can be viewed [here](docs/nms_dissertation.pdf) [[PDF download](https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf)]. The original submission can be accessed using [this branch](https://github.com/nmstreethran/WindTurbineClassification/tree/b07072256df783c69c2736d1e38302d5df451887), or by downloading the [v1.0.0 archive](https://github.com/nmstreethran/WindTurbineClassification/releases/tag/v1.0.0) (also available on [Zenodo](https://doi.org/10.5281/zenodo.2875804)).
+
+**Unfortunately, the datasets are proprietary and I do not own the rights to distribute them to the public.** As a result, I will not be making any further improvements to the code. If you would like me to explain the method I have used, or have any questions, please let me know, preferably through an [issue](https://github.com/nmstreethran/WindTurbineClassification/issues).
+
+The list of dependencies can be found in `requirements.txt`. All Python scripts are organised into relevant directories in `scripts/`. The outputs of these scripts can be viewed in the Jupyter notebooks in `jupyter-notebooks/`. Tables and images used, in the form of `.png` and `.pdf` files, are in `images/`. The dissertation document, which is compiled using LaTeX, can be found in `docs/`.
+
+## Document compilation
 
 To compile the LaTeX document, use the following commands within the `docs` directory:
 

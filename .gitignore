@@ -364,10 +364,9 @@ TSWLatexianTemp*
 # standalone packages
 *.sta
 
-# Visual Studio Code
+# User files
 *.code-workspace
 .vscode/
-requirements.sh
 
 # User folders
 data/
