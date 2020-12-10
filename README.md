@@ -38,4 +38,4 @@ Maximising the economic effectiveness of a wind farm is essential in making wind
 Unless otherwise stated:
 
 - Code and scripts are licensed under the [MIT License](https://opensource.org/licenses/MIT).
-- Content, images, and documentation are licensed under a [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/).
+- Content, images, and documentation are licensed under a [Creative Commons Attribution 4.0 International (CC-BY-4.0) License](https://creativecommons.org/licenses/by/4.0/).
