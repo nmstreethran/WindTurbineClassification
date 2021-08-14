@@ -11,7 +11,7 @@ The SCADA data has 17 fields, summarised in \autoref{t1}. Fields highlighted in 
 \begin{table}
   \centering
   \caption{\label{t1}Summary of SCADA fields for the SCADA data used in this project. The fields include timestamps with a resolution of 10 minutes, average active power, wind speed, pitch and runtime. The fields that contain measurements averaged over the 10-minute period are highlighted in green. These measurements can be used as features in machine learning as they are turbine properties.}
-  \includegraphics{t1}
+  \includegraphics{../images/t1}
 \end{table}
 
 The downtime data consists of fields summarised in \autoref{t2}. Each row of downtime data consists of the start and end timestamps of the downtime event, downtime categories, workorders and alarms. Downtime categories, which are turbine, environmental, grid, infrastructure and availability categories, describes the turbine's condition or cause of downtime when the maintenance work was undertaken. Each condition within each downtime category is represented by a unique identifier in the dataset. A separate spreadsheet accompanying the dataset list what each identifier stands for. All quantities in the downtime data, except the alarms, are supervised (i.e., the data recordings are input and monitored by maintenance professionals).
@@ -19,7 +19,7 @@ The downtime data consists of fields summarised in \autoref{t2}. Each row of dow
 \begin{table}
   \centering
   \caption{\label{t2}Summary of fields for the downtime data used in this project. The fields include start and end timestamps for the downtime event, downtime categories, workorders and alarms.}
-  \includegraphics[width=\textwidth]{t2}
+  \includegraphics[width=\textwidth]{../images/t2}
 \end{table}
 
 Each row of SCADA data requires a class which describes the state of the turbine. The chosen classes are `normal' for normal behaviour, and `faulty' to signify a fault. As the aim is to predict faults in advance, a category of classes, called `before fault' will also be used. To automate the labelling process, the SCADA data can be merged with the downtime data, which has turbine categories, listed in \autoref{t3}, that can be used to label faults. Some of these turbine categories, such as `OK' and `scheduled maintenance', do not indicate a fault in the turbine, and `other' does not specify the condition. Therefore, only the turbine categories which indicate faults, highlighted in green, are used to class the SCADA data. Prior to merging the two datasets, the downtime data is restructured such that it has the same 10-minute resolution as the SCADA data. The SCADA data was also found to have missing rows of data. Empty data rows with only the timestamp corresponding to the missing rows were added to rectify this. Once they are merged, 14 separate labels, or columns, are added for each specific fault, which will allow for the different faults to be distinguished. The rows with a fault category are classed as `faulty' in the corresponding column.
@@ -27,7 +27,7 @@ Each row of SCADA data requires a class which describes the state of the turbine
 \begin{table}
   \centering
   \caption{\label{t3}List of turbine categories in the wind farm downtime data. The categories used as the different faults for labelling are highlighted in green. The others do not indicate a fault.}
-  \includegraphics{t3}
+  \includegraphics{../images/t3}
 \end{table}
 
 To summarise the machine learning terminology used, features refer to SCADA fields which are turbine properties, labels refer to turbine categories or type of fault, and classes refer to the state of the turbine (e.g., `normal' or `faulty') for each row of data at each label. The features and labels will be fit to a classifier for training as arrays X of size [rows, 10] and Y of size [rows, 14] respectively, where rows refer to the number of rows in the training data.
@@ -40,26 +40,19 @@ Power curves are used to help with labelling as they are easier to visualise due
   \centering
   \begin{subfigure}[t]{.5\textwidth}
     \centering
-    \includegraphics[height=5cm]{f1a}
+    \includegraphics[height=5cm]{../images/f1a}
     \caption{\label{f1a}All data points.}
   \end{subfigure}%
   \begin{subfigure}[t]{.5\textwidth}
     \centering
-    \includegraphics[height=5cm]{f1b}
+    \includegraphics[height=5cm]{../images/f1b}
     \caption{\label{f1b}Without curtailment (i.e., pitch angle is between 0\,\textdegree~ and 3.5\,\textdegree~ for `normal' data points between 10\,\% power and 90\,\% power).}
   \end{subfigure}
   \begin{subfigure}[t]{.5\textwidth}
     \centering
-    \includegraphics[height=5cm]{f1c}
+    \includegraphics[height=5cm]{../images/f1c}
     \caption{\label{f1c}
-      Additional filters (applied to `normal' data points):\\
-      \textbullet~ Power > 100 kW before cut-in (3 m/s)\\
-      \textbullet~ At operating wind speeds (3 m/s to 25 m/s):\\
-      -~~~~ Power ≤ 0 kW\\
-      -~~~~ Runtime < 600 s\\
-      -~~~~ Availability categories ≠ available / non-penalising\\
-      -~~~~ Environmental, grid or infrastructure categories ≠ OK\\
-      -~~~~ Turbine categories not highlighted in \autoref{t3}, or ≠ OK
+      Additional filters (applied to `normal' data points): power > 100 kW before cut-in (3 m/s), and at operating wind speeds (3 m/s to 25 m/s): (i) power ≤ 0 kW; (ii) runtime < 600 s; (iii) availability categories ≠ available / non-penalising; (iv) environmental, grid or infrastructure categories ≠ OK; (v) turbine categories not highlighted in \autoref{t3}, or ≠ OK.
     }
   \end{subfigure}
   \caption{\label{f1}Changes to the power curve of turbine 2 with the fault points corresponding to when the turbine category is 16 (`tower') through the two stages of filtering out anomalous and curtailment points labelled as `normal'. The original power curve is shown in \ref{f1a}. The first stage involves a filter based on a pitch angle threshold, which produces \ref{f1b}. The second stage involves several additional filters to produce the final power curve \ref{f1c}.}
@@ -79,7 +72,7 @@ To increase reliability of the results, a five-fold cross-validation is performe
 
 \begin{figure}
   \centering
-  \includegraphics[width=.8\textwidth]{f2}
+  \includegraphics[width=.8\textwidth]{../images/f2}
   \caption{\label{f2}Illustration of traditional cross-validation and time series split cross-validation, both five-folds. In time series split, shown on the right, the order of data is taken into account.}
 \end{figure}
 

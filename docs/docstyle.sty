@@ -1,0 +1,175 @@
+%% docstyle.sty
+%% Repository: https://gitlab.com/nithiya/booktemplate
+%% Copyright 2021 N. M. Streethran (nmstreethran at gmail dot com)
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+% The Current Maintainer of this work is N. M. Streethran.
+%
+% This work consists of the following files: the styles in
+% docstyle.sty, the main configurations in docmain.tex, and the
+% contents in doccontents.tex.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% to avoid overfull margins
+\emergencystretch3em
+
+% set date format
+\usepackage[british]{datetime2}
+
+% colours
+\usepackage[svgnames]{xcolor}
+
+% author and title definitions
+\author{\theauthor}
+\title{\thetitle}
+
+% fonts and math
+\usepackage{mathtools}
+\usepackage{euler}
+\usepackage[nomath]{libertinus}
+
+% tables and graphics
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{graphicx}
+% table font size
+\let\oldlongtable\longtable
+\renewcommand{\longtable}{\footnotesize\oldlongtable}
+\usepackage[font=small,labelfont=bf]{caption}
+% set default table and figure placement to !htb
+\makeatletter
+\def\fps@table{!htb}
+\def\fps@figure{!htb}
+\makeatother
+% for subfigures
+\usepackage{subcaption}
+% for PDFs
+\usepackage{pdflscape}
+
+% list-of lists formatting
+\usepackage[titles]{tocloft}
+% remove dots in all other lists
+\renewcommand{\cftdotsep}{\cftnodots}
+% configure fonts
+\renewcommand{\cftchappresnum}{\normalfont}
+\renewcommand{\cftsubsecfont}{\itshape}
+\renewcommand{\cftchappagefont}{\mdseries}
+% change ToC title
+\renewcommand\contentsname{Table of Contents}
+% add lists to ToC
+\usepackage[nottoc]{tocbibind}
+% content lists
+\def\contentlists{
+  \tableofcontents
+  \listoffigures
+  \listoftables
+}
+
+% to add spaces between paragraphs
+\usepackage[indent]{parskip}
+% use parskip after tocloft
+% https://tex.stackexchange.com/a/395884/140109
+% line spacing
+\usepackage{setspace}
+% bullet points and lists
+\usepackage{enumitem}
+\setlist{itemsep=0pt}
+
+% modify section styles
+\usepackage{titlesec}
+\titleformat{\part}[display]{\vfill\filcenter\scshape}
+  {\huge\MakeLowercase{\partname~\thepart}}{0em}{\Huge\lowercase}[\vfill]
+\titleformat{\chapter}[display]{}
+  {\huge\scshape\MakeLowercase{\chaptername~\thechapter}}{0em}{\Huge\itshape}
+\titleformat{\section}{\LARGE\itshape}{\thesection}{0em}{}
+\titleformat{\subsection}{\Large\itshape}{\thesubsection}{0em}{}
+\titleformat{\subsubsection}{\large\itshape}{\thesubsubsection}{0em}{}
+\titleformat{\paragraph}[runin]{\itshape}{\paragraph}{0em}{}
+\titleformat{\subparagraph}[runin]{\scshape\lowercase}{\subparagraph}{0em}{}
+
+% use continuous numbering
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
+% remove section numbers
+\setcounter{secnumdepth}{0}
+
+\usepackage[%
+  language=british,sorting=none,alldates=comp,dateabbrev=false,
+  giveninits=true,defernumbers=true,maxbibnames=9]{biblatex}
+
+% add Oxford comma in the authors list in the bibliography
+\DefineBibliographyExtras{british}{\def\finalandcomma{\addcomma}}
+% suppress URL, ISSN if DOI is present
+\DeclareSourcemap{%
+\maps[datatype=bibtex]{\map[overwrite]{%
+  \step[fieldsource=doi,final]
+  \step[fieldset=url,null]
+  \step[fieldset=issn,null]
+}}}
+% categorise all cited entries
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+
+% PDF metadata and hyperlink set-up
+\usepackage[hidelinks]{hyperref}
+% force capitalisation of chapter in autoref
+\def\chapterautorefname{Chapter}
+\hypersetup{%
+  pdftitle={\thetitle},pdfauthor={\theauthor},pdfsubject={\subject},
+  pdfkeywords={\keywords},colorlinks=true,linkcolor=\internallink,
+  citecolor=\internallink,urlcolor=\externallink
+}
+% don't use monospace font for URLs
+\urlstyle{same}
+
+% set the document's paper and margin sizes
+\usepackage[a4paper]{geometry}
+\geometry{%
+  lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,
+  headheight=14.5pt
+}
+
+% modify header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% sets both header and footer to nothing
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[LE,RO]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+% footer for first page of chapter
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+}
+
+% use symbols for footnotes in frontmatter
+\newcommand{\thefrontmatter}{%
+  \frontmatter
+  \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+}
+% add chapter name to header in mainmatter only
+\newcommand{\themainmatter}{%
+  \mainmatter
+  \fancyhead[LO]{\scshape\MakeLowercase{\leftmark}}
+  \setcounter{footnote}{0}
+  \renewcommand{\thefootnote}{\arabic{footnote}}
+}
+% appendix format
+\newcommand{\theappendix}{%
+  \appendix
+  \titleformat{\chapter}[display]{\Huge}
+    {\scshape\MakeLowercase{\appendixname~\thechapter}}{0em}{\itshape}
+}

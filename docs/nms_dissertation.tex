@@ -1,165 +1,95 @@
-\documentclass[twoside,11pt,openany]{book}
-% avoid overfulls in right margin
-\emergencystretch3em
+% arara: xelatex
+% arara: biber
+% arara: xelatex
+% arara: xelatex
 
-% set date format
-\usepackage[british]{datetime2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[twoside,12pt,openany]{book}
 
-%% define metadata
-\def\documenttitle{Specification of \texorpdfstring{`}{'}normal' wind turbine
-  operating behaviour for rapid anomaly detection: through the use of machine
-  learning algorithms}
-\def\authorname{Nithiya M Streethran}
-\def\keywords{wind turbine, classification algorithm, SCADA,
-  fault detection, condition monitoring}
-\def\documentdate{25th August 2017}
-\def\programme{MSc in Renewable Energy Engineering}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define author's name and document title
+\def\theauthor{Nithiya Mangala Streethran}
+\def\thetitle{%
+  Specification of \texorpdfstring{`}{'}normal' wind turbine operating
+  behaviour for rapid anomaly detection: through the use of machine
+  learning algorithms%
+}
 
-%% metadata and hyperlink set-up
-\title{\textbf\documenttitle}
-\author{\authorname}
+% PDF metadata - optional subject and comma-separated keywords
+% leave the braces blank if not applicable
+\def\subject{Renewable Energy Engineering}
+\def\keywords{%
+  wind turbine, classification algorithm, SCADA, fault detection,
+  condition monitoring%
+}
 
-%% fonts and math
-\usepackage{mathtools}
-\usepackage[osf]{newpxtext}
-\usepackage{eulerpx}
-\usepackage{textcomp}
+% choose internal and external link colours
+% (named colours via svgnames are available)
+% see xcolor's documentation for a full list of svgnames colours:
+% http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf
+\def\externallink{SeaGreen}
+\def\internallink{DarkOrchid}
 
-%% bibliography
-\usepackage[sorting=none,alldates=comp,useprefix=true,
-  giveninits=true,defernumbers=true,language=british]{biblatex}
-% remap software entries to online
-\DeclareBibliographyAlias{software}{online}
-% suppress shorthand values
-\DeclareSourcemap{
-  \maps[datatype=bibtex]{\map{\step[fieldset=shorthand,null]}}}
-% suppress eprint class values
-\DeclareSourcemap{
-  \maps[datatype=bibtex]{\map{\step[fieldset=eprintclass,null]}}}
-% import file
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{docstyle}
+
+% bibliography
 \addbibresource{references.bib}
 
-%% contents and floats
-\renewcommand*\contentsname{Table of Contents}
-\usepackage{graphicx}
-% adding lists to the ToC
-\usepackage[nottoc]{tocbibind}
-\usepackage[font=small,labelfont=bf]{caption}
-% set default figure and table placement to !htb
-\makeatletter
-\def\fps@figure{!htb}
-\def\fps@table{!htb}
-\makeatother
-\graphicspath{{../images/}}
-% for changing page orientation
-\usepackage{pdflscape}
-% subfigures
-\usepackage{subcaption}
-% continuous numbering of floats and equations
-\usepackage{chngcntr}
-\counterwithout{figure}{chapter}
-\counterwithout{table}{chapter}
-\counterwithout{equation}{chapter}
-
-\usepackage[hidelinks]{hyperref}
-% force capitalisation of chapter in autoref
-\def\chapterautorefname{Chapter}
-\hypersetup{
-  colorlinks=true,urlcolor=magenta,linkcolor=blue,citecolor=blue,
-  pdfauthor={\authorname},pdftitle={\documenttitle},
-  pdfkeywords={\keywords},pdfsubject={\programme}
-}
-% don't use monospace font for URLs
-\urlstyle{same}
-
-\usepackage[a4paper]{geometry}
-\geometry{
-  lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm,headheight=13.6pt}
-
-%% header and footer
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancypagestyle{plain}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{0pt}
-  \fancyfoot[C]{\thepage}
-}
-% sets both header and footer to nothing
-\fancyhf{}
-% remove horizontal line from header
-\renewcommand{\headrulewidth}{0pt}
-\fancyfoot[RE,LO]{\thepage}
-\fancyfoot[RO,LE]{\textit\programme}
-\fancyhead[RE]{\authorname} 
-\fancyhead[LO]{\textit{\nouppercase{\leftmark}}}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-  \frontmatter
-  \begin{titlepage}
-    \hspace{0pt} % vertical centering
-    \vfill % ^
-    \centering % horizontal centering
-    \huge\textbf\documenttitle
-    \\[2cm]
-    \Large Dissertation for the Degree of \programme
-    \\
-    Heriot-Watt University
-    \\[2cm]
-    \authorname \textsuperscript{\,1, }*
-    \\[.3cm]
-    Supervisors: Dr Nick Bennett \textsuperscript{2} and
-    Dr Iain Dinwoodie \textsuperscript{3}
-    \\[.3cm]
-    \large
-    \textsuperscript{1, 2} School of Engineering and Physical Sciences,
-    Heriot-Watt University, Edinburgh EH14 4AS, United Kingdom
-    \\[.1cm]
-    \textsuperscript{3} Natural Power Consultants, Ltd.,
-    Stirling FK7 7XE, United Kingdom
-    \\[.3cm]
-    * Email: nmstreethran@gmail.com
-    \\[2cm]
-    \Large
-    Submitted on \documentdate
-    \\[.3cm]
-    Recompiled on \today
-    \\[2cm]
-    The contents of this document are licensed under a
-    \href{https://creativecommons.org/licenses/by/4.0/}
-    {Creative Commons Attribution 4.0 International (CC-BY-4.0) license}.
-    \vfill % vertical centering
-    \hspace{0pt} % ^
-  \end{titlepage}
-  \input{abstract}
-  \tableofcontents
-  \listoffigures
-  \listoftables
+\thefrontmatter
 
-  \mainmatter
-  \input{introduction}
-  \input{methodology}
-  \input{results}
-  \input{discussion}
-  \input{conclusion}
+% use \maketitle, or define a custom titlepage
+\begin{titlepage}
+  \hspace{0pt}\vfill % vertical centering
+  \centering % horizontal centering
+  \Large\thetitle
+  \\[4cm]
+  \large\theauthor
+  \vfill
+  25th August 2017
+  \\[2cm]
+  Last updated: \today
+  \vfill\hspace{0pt} % vertical centering
+\end{titlepage}
 
-  % apply backmatter environment to references only
-  % to suppress chapter numbering
-  {
-    \backmatter
-    \input{acknowledgements}
+% set spacing
+\onehalfspacing
 
-    \chapter{References}
-    % fix underfull hbox errors
-    \begingroup
-    \hbadness10000\relax
-    \printbibliography[heading=none]
-    \endgroup
-  }
+% copyright info
+\hspace{0pt}\vfill
+\noindent\textcopyright~ 2017-2021 Nithiya Mangala Streethran \\[.5cm]
+\noindent Email: nmstreethran@gmail.com \\[.5cm]
+\noindent The contents of this document are licensed under a
+\href{https://creativecommons.org/licenses/by/4.0/}%
+{Creative Commons Attribution 4.0 International (CC-BY-4.0) License}.
+\vfill\hspace{0pt}
 
-  \appendix
-  \input{appendices}
+\input{abstract}
 
+\contentlists
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\themainmatter
+
+\input{introduction}
+\input{methodology}
+\input{results}
+\input{discussion}
+\input{conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{%
+  \backmatter%
+  \input{acknowledgements}%
+  \chapter{References}%
+  \printbibliography[category=cited,heading=none]%
+}
+
+\theappendix
+\input{appendices}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

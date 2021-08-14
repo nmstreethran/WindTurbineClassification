@@ -7,12 +7,12 @@
 \begin{table}
   \centering
   \caption{\label{t4}Overall precision, recall and F1 scores for optimising hyperparameters for decision trees and random forests, and k nearest neighbours. The mean and standard deviation are obtained by averaging all scores output by all turbines for the optimal hyperparameter. The values are colour-coded to show better performances (i.e., higher mean and lower standard deviation) in darker shades and worse performances in lighter shades.}
-  \includegraphics[width=\textwidth]{t4}
+  \includegraphics[width=\textwidth]{../images/t4}
 \end{table}
 
 \begin{figure}
   \centering
-  \includegraphics[width=.9\textwidth]{f3}
+  \includegraphics[width=.9\textwidth]{../images/f3}
   \caption{\label{f3}Number of neighbours, or k value for each turbine optimised based on the average F1 score through five-fold cross-validation. The optimal k is 13 or less for 17 turbines, and more than 100 for 5 turbines.}
 \end{figure}
 
@@ -21,7 +21,7 @@ The time taken to execute the Python code using the optimal hyperparameters to p
 \begin{table}
   \centering
   \caption{\label{t5}Time taken to run each classifier using imbalanced and balanced datasets for the 30-month period. These timings are approximate as the RAM was not utilised fully by the Python application due to other processes running in the background, and the application had to be restarted a number of time due to system crashes.}
-  \includegraphics{t5}
+  \includegraphics{../images/t5}
 \end{table}
 
 \section{Performance of each turbine and label}
@@ -32,7 +32,7 @@ The classification results using random forests for each turbine and label in fu
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{f4}
+  \includegraphics[width=\textwidth]{../images/f4}
   \caption{\label{f4}Bar chart showing the various turbine categories quantified by the downtime frequency per turbine per year on the left, and downtime period, in hours, per turbine per year on the right. This was plot using the downtime data.}
 \end{figure}
 
@@ -53,5 +53,5 @@ The importance of each feature used, which are a set of normalised scores \cite{
 \begin{table}
   \centering
   \caption{\label{t6}Feature importance for turbine categories 10 and 5 using random forests and either imbalanced (I) or balanced (B) training data. The values are normalised and colour-coded, transitioning from red (lower importance) to yellow (intermediate) to green (higher importance).}
-  \includegraphics[width=\textwidth]{t6}
+  \includegraphics[width=\textwidth]{../images/t6}
 \end{table}
