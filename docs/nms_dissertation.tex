@@ -3,7 +3,6 @@
 % arara: xelatex
 % arara: xelatex
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[twoside,12pt,openany]{book}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -30,16 +29,13 @@
 \def\externallink{SeaGreen}
 \def\internallink{DarkOrchid}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{docstyle}
-
-% bibliography
 \addbibresource{references.bib}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\thefrontmatter
+\frontmatter
 
 % use \maketitle, or define a custom titlepage
 \begin{titlepage}
@@ -55,23 +51,21 @@
   \vfill\hspace{0pt} % vertical centering
 \end{titlepage}
 
-% set spacing
-\onehalfspacing
-
 % copyright info
 \hspace{0pt}\vfill
-\noindent\textcopyright~ 2017-\the\year{}~\theauthor \\[.5cm]
+\noindent\textcopyright~2017-\the\year{}~\theauthor \\[.5cm]
 \noindent Email: nmstreethran@gmail.com \\[.5cm]
 \noindent The contents of this document are licensed under a
 \href{https://creativecommons.org/licenses/by/4.0/}%
 {Creative Commons Attribution 4.0 International (CC-BY-4.0) License}.
 \vfill\hspace{0pt}
 
-\input{abstract}
-
-\contentlists
+\onehalfspacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{abstract}
+\contentlists
+
 \themainmatter
 
 \input{introduction}
@@ -80,7 +74,6 @@
 \input{discussion}
 \input{conclusion}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {%
   \backmatter%
   \input{acknowledgements}%

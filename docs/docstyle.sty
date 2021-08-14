@@ -56,7 +56,6 @@
 \renewcommand{\cftdotsep}{\cftnodots}
 % configure fonts
 \renewcommand{\cftchappresnum}{\normalfont}
-\renewcommand{\cftsubsecfont}{\itshape}
 \renewcommand{\cftchappagefont}{\mdseries}
 % change ToC title
 \renewcommand\contentsname{Table of Contents}
@@ -87,7 +86,6 @@
 
 % use continuous numbering
 \usepackage{chngcntr}
-\counterwithout{footnote}{chapter}
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
 \counterwithout{equation}{chapter}
@@ -134,17 +132,10 @@
   \fancyfoot[C]{\thepage}
 }
 
-% use symbols for footnotes in frontmatter
-\newcommand{\thefrontmatter}{%
-  \frontmatter
-  \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-}
 % add chapter name to header in mainmatter only
 \newcommand{\themainmatter}{%
   \mainmatter
   \fancyhead[LO]{\scshape\MakeLowercase{\leftmark}}
-  \setcounter{footnote}{0}
-  \renewcommand{\thefootnote}{\arabic{footnote}}
 }
 % appendix format
 \newcommand{\theappendix}{%
