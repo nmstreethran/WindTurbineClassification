@@ -38,12 +38,7 @@
 \usepackage[nomath]{libertinus}
 
 % tables and graphics
-\usepackage{longtable}
-\usepackage{booktabs}
 \usepackage{graphicx}
-% table font size
-\let\oldlongtable\longtable
-\renewcommand{\longtable}{\footnotesize\oldlongtable}
 \usepackage[font=small,labelfont=bf]{caption}
 % set default table and figure placement to !htb
 \makeatletter
@@ -86,15 +81,9 @@
 
 % modify section styles
 \usepackage{titlesec}
-\titleformat{\part}[display]{\vfill\filcenter\scshape}
-  {\huge\MakeLowercase{\partname~\thepart}}{0em}{\Huge\lowercase}[\vfill]
 \titleformat{\chapter}[display]{}
   {\huge\scshape\MakeLowercase{\chaptername~\thechapter}}{0em}{\Huge\itshape}
 \titleformat{\section}{\LARGE\itshape}{\thesection}{0em}{}
-\titleformat{\subsection}{\Large\itshape}{\thesubsection}{0em}{}
-\titleformat{\subsubsection}{\large\itshape}{\thesubsubsection}{0em}{}
-\titleformat{\paragraph}[runin]{\itshape}{\paragraph}{0em}{}
-\titleformat{\subparagraph}[runin]{\scshape\lowercase}{\subparagraph}{0em}{}
 
 % use continuous numbering
 \usepackage{chngcntr}
@@ -111,16 +100,6 @@
 
 % add Oxford comma in the authors list in the bibliography
 \DefineBibliographyExtras{british}{\def\finalandcomma{\addcomma}}
-% suppress URL, ISSN if DOI is present
-\DeclareSourcemap{%
-\maps[datatype=bibtex]{\map[overwrite]{%
-  \step[fieldsource=doi,final]
-  \step[fieldset=url,null]
-  \step[fieldset=issn,null]
-}}}
-% categorise all cited entries
-\DeclareBibliographyCategory{cited}
-\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
 
 % PDF metadata and hyperlink set-up
 \usepackage[hidelinks]{hyperref}
