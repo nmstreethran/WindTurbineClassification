@@ -26,8 +26,8 @@
 % (named colours via svgnames are available)
 % see xcolor's documentation for a full list of svgnames colours:
 % http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf
-\def\externallink{SeaGreen}
-\def\internallink{DarkOrchid}
+\def\externallink{DarkBlue}
+\def\internallink{DarkBlue}
 
 \usepackage{docstyle}
 \addbibresource{references.bib}
@@ -44,8 +44,6 @@
   \\[4cm]
   \large\theauthor
   \vfill
-  25th August 2017
-  \\[.5cm]
   Last updated: \today
   \vfill\hspace{0pt} % vertical centering
 \end{titlepage}
@@ -57,6 +55,11 @@
 \\[.5cm]
 Email: nmstreethran@gmail.com
 \\[.5cm]
+This work is derived from my dissertation for the degree of Master of Science
+(MSc) in Renewable Energy Engineering at Heriot-Watt University, which was
+completed during a technical placement at Natural Power between May and
+August 2017.
+\\[.5cm]
 The contents of this document are licenced under a
 Creative Commons Attribution 4.0 International (CC-BY-4.0) License. \\
 \url{https://creativecommons.org/licenses/by/4.0/}
@@ -67,7 +70,12 @@ Creative Commons Attribution 4.0 International (CC-BY-4.0) License. \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{abstract}
-\contentlists
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{acknowledgements}
 
 \themainmatter
 
@@ -79,7 +87,6 @@ Creative Commons Attribution 4.0 International (CC-BY-4.0) License. \\
 
 {%
   \backmatter%
-  \input{acknowledgements}%
   \chapter{References}%
   \printbibliography[heading=none]%
 }

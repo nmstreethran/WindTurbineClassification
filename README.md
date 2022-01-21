@@ -1,19 +1,15 @@
 # WindTurbineClassification
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2875795.svg)](https://doi.org/10.5281/zenodo.2875795)
-[![View the dissertation (PDF)](https://img.shields.io/static/v1?label=%20&labelColor=red&message=View%20the%20dissertation&color=white&logo=adobeacrobatreader)](https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf)
+[![DOI](images/badges/doi.svg)](https://doi.org/10.5281/zenodo.2875795)
+[![View documentation (PDF)](images/badges/pdf.svg)](https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf)
 
 ***Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms***
 
 by Nithiya Streethran (nmstreethran at gmail dot com)
 
-## Description of files
+This work is derived from my dissertation for the degree of Master of Science (MSc) in Renewable Energy Engineering at Heriot-Watt University, which was completed during a technical placement at Natural Power between May and August 2021.
 
-This repository is an archive of files created for my master's dissertation, which was completed between May and August 2017 at Heriot-Watt University and Natural Power.
-
-The list of Python dependencies (Python 3) can be found in [`requirements.txt`](requirements.txt). All Python scripts are organised into relevant directories in [`scripts/`](scripts/). Jupyter notebooks with outputs of these scripts can be viewed in [`jupyter-notebooks/`](jupyter-notebooks/). Tables and images used, in the form of `.png` and `.pdf` files, are in [`images/`](images/). The dissertation document with references, which was compiled using LaTeX, can be found in [`docs/`](docs/).
-
-**Unfortunately, the datasets are proprietary and I do not own the rights to distribute them to the public.** If you have any questions, please contact me, or start a discussion [here](https://github.com/nmstreethran/WindTurbineClassification/discussions).
+**Unfortunately, the datasets are proprietary and I do not own the rights to distribute them to the public.** If you have any questions, please feel free to contact me, or start a discussion [here](https://github.com/nmstreethran/WindTurbineClassification/discussions).
 
 ## Abstract
 
@@ -35,3 +31,5 @@ Unless otherwise stated:
 
 - Code and scripts are licensed under the [MIT License](https://opensource.org/licenses/MIT).
 - Content, images, and documentation are licensed under a [Creative Commons Attribution 4.0 International (CC-BY-4.0) License](https://creativecommons.org/licenses/by/4.0/).
+
+Project badges are generated using [Shields.io](https://shields.io/) and [Simple Icons](https://simpleicons.org/).
