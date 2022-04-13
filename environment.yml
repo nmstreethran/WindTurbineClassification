@@ -1,0 +1,11 @@
+name: wind-turbine-classification
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3
+  - imbalanced-learn
+  - matplotlib
+  - pandas
+  - jupyterlab
+  - openpyxl
