@@ -21,8 +21,8 @@ Maximising the economic effectiveness of a wind farm is essential in making wind
 
 &nbsp; | Source | Output
 -- | -- | --
-Data processing | [scripts/process_data.py](scripts/process_data.py) | [![View Jupyter Notebook](images/badges/NOTEBOOK.svg)](https://nbviewer.org/github/nmstreethran/WindTurbineClassification/blob/current/jupyter-notebooks/process_data.ipynb)
-Downtime categories | [scripts/downtime_categories.py](scripts/downtime_categories.py) | [![View Jupyter Notebook](images/badges/NOTEBOOK.svg)](https://nbviewer.org/github/nmstreethran/WindTurbineClassification/blob/current/jupyter-notebooks/downtime_categories.ipynb)
+Data processing | [scripts/process_data.py](scripts/process_data.py) | [![View Jupyter Notebook](images/badges/NOTEBOOK.svg)](https://nbviewer.org/github/nmstreethran/WindTurbineClassification/blob/current/docs/jupyter-notebooks/process_data.ipynb)
+Downtime categories | [scripts/downtime_categories.py](scripts/downtime_categories.py) | [![View Jupyter Notebook](images/badges/NOTEBOOK.svg)](https://nbviewer.org/github/nmstreethran/WindTurbineClassification/blob/current/docs/jupyter-notebooks/downtime_categories.ipynb)
 
 ## License
 
