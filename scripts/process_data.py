@@ -1,6 +1,15 @@
 """Process data
 
-Processing and merging datasets
+This script merges all four CSV files containing SCADA and downtime data into
+single CSV files. Two files are older datasets, and the other two are newer
+datasets. Both old and new datasets have most of their timestamps in common.
+
+The older SCADA datasets were found to have some errors in the rotor speed
+readings. This merging replaces the old errorred data points with the new
+ones, and removes incomplete rows.
+
+This merging ensures the downtime data has the same range as the SCADA data,
+and removes incomplete rows.
 """
 
 # import libraries
