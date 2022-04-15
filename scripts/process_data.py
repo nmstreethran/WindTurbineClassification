@@ -1,4 +1,4 @@
-"""Process data
+"""Process SCADA and downtime data
 
 This script merges all four CSV files containing SCADA and downtime data into
 single CSV files. Two files are older datasets, and the other two are newer
