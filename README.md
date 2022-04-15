@@ -3,6 +3,8 @@
 [![DOI](images/badges/DOI.svg)](https://doi.org/10.5281/zenodo.2875795)
 [![View report (PDF)](images/badges/REPORT.svg)](https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf)
 
+<!-- https://img.shields.io/static/v1?label=&message=script&style=for-the-badge&logo=python&labelColor=snow&color=grey -->
+
 ***Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms***
 
 by Nithiya Streethran (nmstreethran@gmail.com)
@@ -21,9 +23,9 @@ Maximising the economic effectiveness of a wind farm is essential in making wind
 
 &nbsp; | Source | Output
 ------ | -- | --
-Process SCADA and downtime data | [scripts/process_data.py](scripts/process_data.py) | [![View Jupyter Notebook](images/badges/NOTEBOOK.svg)](https://nbviewer.org/github/nmstreethran/WindTurbineClassification/blob/current/docs/jupyter-notebooks/process_data.ipynb)
-Downtime categories | [scripts/downtime_categories.py](scripts/downtime_categories.py) | [![View Jupyter Notebook](images/badges/NOTEBOOK.svg)](https://nbviewer.org/github/nmstreethran/WindTurbineClassification/blob/current/docs/jupyter-notebooks/downtime_categories.ipynb)
-Merge SCADA and downtime data | [scripts/SCADA_downtime_merge.py](scripts/SCADA_downtime_merge.py)
+Process SCADA and downtime data | [![View Python script](images/badges/SCRIPT.svg)](scripts/process_data.py) | [![View Jupyter Notebook](images/badges/NOTEBOOK.svg)](https://nbviewer.org/github/nmstreethran/WindTurbineClassification/blob/current/docs/jupyter-notebooks/process_data.ipynb)
+Downtime categories | [![View Python script](images/badges/SCRIPT.svg)](scripts/downtime_categories.py) | [![View Jupyter Notebook](images/badges/NOTEBOOK.svg)](https://nbviewer.org/github/nmstreethran/WindTurbineClassification/blob/current/docs/jupyter-notebooks/downtime_categories.ipynb)
+Merge SCADA and downtime data | [![View Python script](images/badges/SCRIPT.svg)](scripts/SCADA_downtime_merge.py)
 Power curves for all turbines | | [![View Jupyter Notebook](images/badges/NOTEBOOK.svg)](https://nbviewer.org/github/nmstreethran/WindTurbineClassification/blob/current/docs/jupyter-notebooks/powercurves_all.ipynb)
 
 ## License
