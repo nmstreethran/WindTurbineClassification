@@ -11,7 +11,7 @@ by Nithiya Streethran (nmstreethran@gmail.com)
 
 This work is derived from my dissertation for the degree of Master of Science (MSc) in Renewable Energy Engineering at Heriot-Watt University, which was completed during a technical placement at Natural Power between May and August 2017.
 
-**Unfortunately, the datasets are proprietary and I do not own the rights to distribute them to the public.** If you have any questions, please feel free to contact me, or start a discussion [here](https://github.com/nmstreethran/WindTurbineClassification/discussions).
+**Unfortunately, the datasets are proprietary industry data and I do not own the rights to distribute them to the public. Please do not contact me to request the datasets.**
 
 ## Abstract
 
