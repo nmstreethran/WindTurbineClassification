@@ -1,6 +1,6 @@
 \chapter{Methodology}\label{c2}
 
-\section{Tools and datasets}
+\section{Tools and Datasets}
 
 This project requires a computer with Python Programming Language \cite{Welco}
 and essential libraries installed for data processing. The computer used has a
@@ -15,7 +15,7 @@ dataset is corresponding downtime data for the same period, with a total file
 size of 4 MB. In the interests of Natural Power, the location of the wind farm
 and turbine model will not be disclosed in this report.
 
-\section{Data processing}
+\section{Data Processing}
 
 The SCADA data has 17 fields, summarised in \autoref{t1}. Fields highlighted
 in green are average measurements recorded over each 10-minute period. Since
@@ -24,8 +24,8 @@ performance, they can be used as features in machine learning. Each turbine
 has two nacelle anemometers and wind vanes; one is used to control the
 turbine, and the other to monitor the first. The measurements from the
 anemometer and wind vane used to control the turbine are recorded again as
-ws\_av and wd\_av, with the latter taking into account the nacelle position.
-Using only ws\_av and wd\_av for wind speed and wind direction, the number of
+`ws\_av' and `wd\_av', with the latter taking into account the nacelle position.
+Using only `ws\_av' and `wd\_av' for wind speed and wind direction, the number of
 features that are available for machine learning is 10.
 
 \begin{table}
@@ -47,7 +47,7 @@ describes the turbine's condition or cause of downtime when the maintenance
 work was undertaken. Each condition within each downtime category is
 represented by a unique identifier in the dataset. A separate spreadsheet
 accompanying the dataset list what each identifier stands for. All quantities
-in the downtime data, except the alarms, are supervised (i.e. the data
+in the downtime data, except the alarms, are supervised (\textit{i.e.} the data
 recordings are input and monitored by maintenance professionals).
 
 \begin{table}
@@ -86,22 +86,22 @@ classed as `faulty' in the corresponding column.
 
 To summarise the machine learning terminology used, features refer to SCADA
 fields which are turbine properties, labels refer to turbine categories or
-type of fault, and classes refer to the state of the turbine (e.g. `normal' or
+type of fault, and classes refer to the state of the turbine (\textit{e.g.} `normal' or
 `faulty') for each row of data at each label. The features and labels will be
 fit to a classifier for training as arrays X of size [rows, 10] and Y of size
 [rows, 14], respectively, where rows refer to the number of rows in the
 training data.
 
 To predict faults for each label, rows with timestamps up to 48 hours in
-advance of a `faulty' row are classed at 6-hour intervals (i.e. up to X hours
-before a fault, where X $=$ 6, 12, \dots, 48). The reasons for having classes
+advance of a `faulty' row are classed at 6-hour intervals (\textit{i.e.} up to X hours
+before a fault, where X \ensuremath{=} 6, 12, \dots, 48). The reasons for having classes
 of 6-hour intervals for fault detection rather than a single class is to allow
 action to be taken appropriate to the time before fault. For example, if it is
 predicted that the wind turbine could have a fault in six hours or less, it
 could be switched off to prevent further damage from occurring. 48 hours is
 enough time for maintenance professionals to travel to site and carry out
 inspection, and decide on what action to take. Depending on the nature of the
-site, this value can be modified (i.e. for an offshore wind farm which
+site, this value can be modified (\textit{i.e.} for an offshore wind farm which
 operates in harsh environments, it is more likely to take a longer time to
 travel to the site and complete works relative to an onshore wind farm).
 
@@ -147,7 +147,7 @@ all 25 turbines. The result of applying these filters is shown in
   \begin{subfigure}[t]{.5\textwidth}
     \centering
     \includegraphics[height=5cm]{../images/f1b}
-    \caption{\label{f1b}Without curtailment (i.e. pitch angle is between
+    \caption{\label{f1b}Without curtailment (\textit{i.e.} pitch angle is between
     0\,\textdegree~ and 3.5\,\textdegree~ for `normal' data points between
     10\,\% power and 90\,\% power).}
   \end{subfigure}
@@ -155,12 +155,12 @@ all 25 turbines. The result of applying these filters is shown in
     \centering
     \includegraphics[height=5cm]{../images/f1c}
     \caption{\label{f1c}
-      Additional filters (applied to `normal' data points): power $>$ 100 kW
+      Additional filters (applied to `normal' data points): power \ensuremath{>} 100 kW
       before cut-in (3 m/s), and at operating wind speeds (3 m/s to 25 m/s):
-      (i) power $\leq$ 0 kW; (ii) runtime $<$ 600 s; (iii) availability
-      categories $\neq$ available / non-penalising; (iv) environmental, grid
-      or infrastructure categories $\neq$ OK; (v) turbine categories not
-      highlighted in \autoref{t3}, or $\neq$ OK.
+      (i) power \ensuremath{\leq} 0 kW; (ii) runtime \ensuremath{<} 600 s; (iii) availability
+      categories \ensuremath{\neq} available / non-penalising; (iv) environmental, grid
+      or infrastructure categories \ensuremath{\neq} OK; (v) turbine categories not
+      highlighted in \autoref{t3}, or \ensuremath{\neq} OK.
     }
   \end{subfigure}
   \caption{\label{f1}Changes to the power curve of turbine 2 with the fault
@@ -180,7 +180,7 @@ to one label, which means they are not necessarily classed as `normal' for
 other labels, and it is important for the classifier to learn the different
 states of the turbine for each fault. To summarise, the classes used are
 `normal', `faulty', `curtailment' and `up to X hours before fault' (where X
-$=$ 6, 12, \dots, 48). 
+\ensuremath{=} 6, 12, \dots, 48). 
 
 \section{Classification}
 
@@ -205,7 +205,7 @@ hyperparameters which can be optimised for specific data for better
 performance. An example is the number of neighbours, or k, for kNN, which is a
 user-defined positive integer.
 
-The data used in this project is highly imbalanced (i.e. the number of samples
+The data used in this project is highly imbalanced (\textit{i.e.} the number of samples
 for `normal' class is in thousands for each turbine, while the `faulty' and `X
 hours before fault' classes only range from tens to a few hundreds). This can
 cause the classifier to be biased towards the majority class and perform
@@ -215,7 +215,7 @@ balancing is done by oversampling all classes using the imbalanced-learn
 library's random over sampler \cite{Lemai} prior to feeding the training data
 into the classifiers. Oversampling is done instead of random sampling, because
 it will not reduce the amount of data, which causes loss of information. This
-oversampling does not support multilabel classification (i.e. it only accepts
+oversampling does not support multilabel classification (\textit{i.e.} it only accepts
 array Y of size [rows, 1]), therefore separate estimators will be used for
 each fault. This means that for each turbine, using the imbalanced multilabel
 approach would only require one estimator which trains on all labels
@@ -282,15 +282,15 @@ for each turbine or fault to produce a final score.
 
 \begin{equation}
   \label{eq1}
-  precision = \frac{tp}{tp + fp}
+  \textrm{precision} = \frac{tp}{tp + fp}
 \end{equation}
 \begin{equation}
   \label{eq2}
-  recall = \frac{tp}{tp + fn}
+  \textrm{recall} = \frac{tp}{tp + fn}
 \end{equation}
 \begin{equation}
   \label{eq3}
-  F1~score = 2 \times \frac{precision \times recall}{precision + recall}
+  \textrm{F1~score} = 2 \times \frac{\textrm{precision} \times \textrm{recall}}{\textrm{precision} + \textrm{recall}}
 \end{equation}
 
 The classification is carried out as a process. The first step is to use
