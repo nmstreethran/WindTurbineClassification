@@ -4,12 +4,12 @@ Multilabel classification with imbalanced data
 Confusion matrices
 """
 
-import pandas as pd  # import libraries
 import numpy as np
-from sklearn.ensemble import RandomForestClassifier
+import pandas as pd  # import libraries
 from sklearn import preprocessing
-from sklearn.model_selection import TimeSeriesSplit
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import TimeSeriesSplit
 
 # import data
 df = pd.read_csv("data/SCADA_downtime_merged.csv", skip_blank_lines=True)

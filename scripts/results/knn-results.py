@@ -2,13 +2,13 @@
 
 """
 
-import pandas as pd  # import libraries
 import numpy as np
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn import preprocessing
-from sklearn.model_selection import TimeSeriesSplit
-from sklearn.metrics import classification_report
+import pandas as pd  # import libraries
 from imblearn.over_sampling import RandomOverSampler
+from sklearn import preprocessing
+from sklearn.metrics import classification_report
+from sklearn.model_selection import TimeSeriesSplit
+from sklearn.neighbors import KNeighborsClassifier
 
 # import data
 df = pd.read_csv("data/SCADA_downtime_merged.csv", skip_blank_lines=True)

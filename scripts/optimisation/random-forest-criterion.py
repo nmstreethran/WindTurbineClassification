@@ -2,11 +2,11 @@
 
 """
 
+import numpy as np
 # import libraries
 import pandas as pd
-import numpy as np
-from sklearn.ensemble import RandomForestClassifier
 from sklearn import preprocessing
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import TimeSeriesSplit
 
 # import data

@@ -12,12 +12,13 @@ This merging ensures the downtime data has the same range as the SCADA data,
 and removes incomplete rows.
 """
 
-# import libraries
-import os
 import glob
 import itertools
-import pandas as pd
+# import libraries
+import os
+
 import numpy as np
+import pandas as pd
 
 # create directory to store processed data
 os.makedirs("data/processed/", exist_ok=True)

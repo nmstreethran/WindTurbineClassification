@@ -2,12 +2,12 @@
 
 """
 
+import numpy as np
 # import libraries
 import pandas as pd
-import numpy as np
-from sklearn.tree import DecisionTreeClassifier
 from sklearn import preprocessing
 from sklearn.model_selection import TimeSeriesSplit
+from sklearn.tree import DecisionTreeClassifier
 
 # import data
 df = pd.read_csv("data/SCADA_downtime_merged.csv", skip_blank_lines=True)

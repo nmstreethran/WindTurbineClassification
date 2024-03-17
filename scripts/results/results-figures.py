@@ -2,10 +2,10 @@
 
 """
 
-# import libraries
-import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+# import libraries
+import pandas as pd
 
 # decision trees
 d = pd.read_csv("data/DT.csv")

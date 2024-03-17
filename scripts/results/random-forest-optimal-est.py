@@ -2,16 +2,14 @@
 
 """
 
-import pandas as pd  # import libraries
 import numpy as np
-from sklearn.ensemble import RandomForestClassifier
-from sklearn import preprocessing
-from sklearn.model_selection import TimeSeriesSplit
-from sklearn.metrics import classification_report
-from sklearn.metrics import f1_score
-from sklearn.metrics import precision_score
-from sklearn.metrics import recall_score
+import pandas as pd  # import libraries
 from imblearn.over_sampling import RandomOverSampler
+from sklearn import preprocessing
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import (classification_report, f1_score, precision_score,
+                             recall_score)
+from sklearn.model_selection import TimeSeriesSplit
 
 # import data
 df = pd.read_csv("data/SCADA_downtime_merged.csv", skip_blank_lines=True)

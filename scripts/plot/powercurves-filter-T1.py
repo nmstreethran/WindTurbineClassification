@@ -2,11 +2,12 @@
 
 """
 
+import itertools
+
+import matplotlib.pyplot as plt
+import numpy as np
 # import libraries
 import pandas as pd
-import numpy as np
-import itertools
-import matplotlib.pyplot as plt
 
 # import data
 df = pd.read_csv("data/SCADA_downtime_merged.csv", skip_blank_lines=True)
