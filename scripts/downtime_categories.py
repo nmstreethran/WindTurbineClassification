@@ -10,7 +10,7 @@ data_cat = pd.read_csv("data/processed/downtime_categories.csv")
 data_ts = pd.read_csv(
     "data/processed/downtime_timeseries.csv",
     lineterminator="\n",
-    parse_dates=["timestamp_start", "timestamp_end"]
+    parse_dates=["timestamp_start", "timestamp_end"],
 )
 
 data_ts["period"] = data_ts["timestamp_end"] - data_ts["timestamp_start"]
