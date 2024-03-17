@@ -4,7 +4,6 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-# import libraries
 import pandas as pd
 from sklearn import preprocessing
 from sklearn.ensemble import RandomForestClassifier

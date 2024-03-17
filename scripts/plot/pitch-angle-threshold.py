@@ -5,7 +5,6 @@
 import itertools
 
 import matplotlib.pyplot as plt
-# import libraries
 import pandas as pd
 
 # import data

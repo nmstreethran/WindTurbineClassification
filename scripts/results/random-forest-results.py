@@ -5,7 +5,7 @@
 from time import gmtime, strftime
 
 import numpy as np
-import pandas as pd  # import libraries
+import pandas as pd
 from imblearn.over_sampling import RandomOverSampler
 from sklearn import preprocessing
 from sklearn.ensemble import RandomForestClassifier

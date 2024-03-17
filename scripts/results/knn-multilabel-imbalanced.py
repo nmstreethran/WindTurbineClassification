@@ -4,7 +4,6 @@ Multilabel classification with imbalanced data
 """
 
 import numpy as np
-# import libraries
 import pandas as pd
 from sklearn import preprocessing
 from sklearn.metrics import classification_report

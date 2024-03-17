@@ -7,7 +7,6 @@ this merging also automates the labelling process needed to train classifiers
 for supervised learning.
 """
 
-# import libraries
 import pandas as pd
 
 # import downtime data

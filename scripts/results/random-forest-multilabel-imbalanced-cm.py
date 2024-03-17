@@ -5,7 +5,7 @@ Confusion matrices
 """
 
 import numpy as np
-import pandas as pd  # import libraries
+import pandas as pd
 from sklearn import preprocessing
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix

@@ -3,7 +3,6 @@
 """
 
 import itertools
-# import libraries
 import subprocess
 
 import numpy as np

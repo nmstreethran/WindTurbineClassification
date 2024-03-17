@@ -4,7 +4,6 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-# import libraries
 import pandas as pd
 
 # decision trees

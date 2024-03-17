@@ -3,7 +3,6 @@
 Generating turbine downtime statistics
 """
 
-# import libraries
 import pandas as pd
 
 data_cat = pd.read_csv("data/processed/downtime_categories.csv")

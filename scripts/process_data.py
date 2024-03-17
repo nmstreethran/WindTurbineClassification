@@ -14,7 +14,6 @@ and removes incomplete rows.
 
 import glob
 import itertools
-# import libraries
 import os
 
 import numpy as np
