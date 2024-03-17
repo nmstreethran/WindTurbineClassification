@@ -9,3 +9,6 @@ dependencies:
   - pandas
   - jupyterlab
   - openpyxl
+  - black
+  - pylint
+  - flake8

@@ -3,3 +3,6 @@ matplotlib
 pandas
 jupyterlab
 openpyxl
+black
+pylint
+flake8
