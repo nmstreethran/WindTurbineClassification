@@ -955,66 +955,128 @@ Appendix
 A1: Pitch angle threshold
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{% include gallery id=“gfa1” layout=“half” caption=“**Figure A1**: Power
+**Figure A1**: Power
 curves for turbine 1 used in selecting the pitch angle threshold.
-**Figure A1a** is the original power curve. In **Figure A1b**, data
+**Figure A1a** is the original power curve.
+In **Figure A1b**, data
 points with a pitch angle not equal to 0 ° between 90 % and 10 % power
-were filtered out, which distorts the power curve shape. In **Figure
-A1c**, all data points have a pitch angle between 0 ° and 3.5 °, which
+were filtered out, which distorts the power curve shape.
+In **Figure A1c**, all data points have a pitch angle between 0 ° and 3.5 °, which
 removes most curtailment and anomalous points while maintaining the
-typical power curve shape. In **Figure A1d**, all data points have a
+typical power curve shape.
+In **Figure A1d**, all data points have a
 pitch angle between 0 ° and 7 °, which allows some curtailment points to
 appear. Therefore, it was decided that the filter used in Figure A1c is
-the most suitable.” %}
+the most suitable.
+
+.. figure:: report/images/fa1a.png
+   :alt: Power curves for turbine 1
+
+   **Figure A1b**
+
+.. figure:: report/images/fa1b.png
+   :alt: Power curves for turbine 1
+
+   **Figure A1d**
+
+.. figure:: report/images/fa1c.png
+   :alt: Power curves for turbine 1
+
+   **Figure A1c**
+
+.. figure:: report/images/fa1d.png
+   :alt: Power curves for turbine 1
+
+   **Figure A1d**
 
 A2: Power before cut-in threshold
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{% include gallery id=“gfa2” caption=“**Figure A2**: Power curves for
+**Figure A2**: Power curves for
 turbine 24 used in selecting the power threshold before cut-in speed.
-**Figure A2a** is the original power curve. **Figure A2b** is the power
+**Figure A2a** is the original power curve.
+**Figure A2b** is the power
 curve with a filter applied to remove all data points with power > 0 kW
 before the cut-in speed of 3 m/s. Anemometer wind speeds, which were
 used to plot these power curves, are not an accurate measure of the wind
 speed incident on the turbine blades. Therefore, a threshold of 100 kW
 before cut-in is applied, which maintains the power curve shape for all
 25 turbines while removing anomalous points, such as the ones in turbine
-2’s power curve.” %}
+2’s power curve.
+
+.. figure:: report/images/fa2a.png
+   :alt: Power curves for turbine 24
+
+   **Figure A2a**
+
+.. figure:: report/images/fa2b.png
+   :alt: Power curves for turbine 24
+
+   **Figure A2b**
 
 A3: Results for random forest classifier
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{% include table-caption caption=“**Table A3:** Precision, recall and F1
+**Table A3:** Precision, recall and F1
 scores for each turbine (**Table A3a**) and each turbine category
 (**Table A3b**) using random forest classifier for both imbalanced and
 balanced training data. The table lists the minimum, mean and maximum
 values for each score, which are also colour-coded to show higher scores
-in darker shades and lower scores in lighter shades.” %} {% include
-gallery id=“gta3” %}
+in darker shades and lower scores in lighter shades.
+
+.. figure:: report/images/ta3a.png
+   :alt: Precision, recall and F1 scores for each turbine
+
+   **Table A3a**
+
+.. figure:: report/images/ta3b.png
+   :alt: Precision, recall and F1 scores for each turbine
+
+   **Table A3b**
 
 A4: Confusion matrices - electrical system
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{% include table-caption caption=“**Table A4:** Normalised confusion
+**Table A4:** Normalised confusion
 matrices for turbine category 10 (‘electrical system’) when classified
 using random forests and either imbalanced or balanced training data,
-with the ‘curtailment’ class (i.e. rows of data with curtailment or
+with the ‘curtailment’ class (i.e. rows of data with curtailment or
 anomalies in any label are not dropped) (**Table A4a**), and without the
 ‘curtailment’ class (**Table A4b**). The matrix is colour-coded; it
 transitions from red (lower scores) to yellow (intermediate) to green
-(higher scores).” %} {% include gallery id=“gta4” %}
+(higher scores).
+
+.. figure:: report/images/ta4a.png
+   :alt: Normalised confusion matrices for turbine category 10
+
+   **Table A4a**
+
+.. figure:: report/images/ta4b.png
+   :alt: Normalised confusion matrices for turbine category 10
+
+   **Table A4b**
 
 A5: Confusion matrices - gearbox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{% include table-caption caption=“**Table A5:** Normalised confusion
+**Table A5:** Normalised confusion
 matrices for turbine category 5 (‘gearbox’) when classified using random
 forests and either imbalanced or balanced training data, with the
-‘curtailment’ class (i.e. rows of data with curtailment or anomalies in
+‘curtailment’ class (i.e. rows of data with curtailment or anomalies in
 any label are not dropped) (**Table A5a**), and without the
 ‘curtailment’ class (**Table A5b**). The matrix is colour-coded; it
 transitions from red (lower scores) to yellow (intermediate) to green
-(higher scores).” %} {% include gallery id=“gta5” %}
+(higher scores).
+
+.. figure:: report/images/ta5a.png
+   :alt: Normalised confusion matrices for turbine category 5
+
+   **Table A5a**
+
+.. figure:: report/images/ta5b.png
+   :alt: Normalised confusion matrices for turbine category 5
+
+   **Table A5b**
 
 References
 ----------
