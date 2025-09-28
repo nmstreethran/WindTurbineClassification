@@ -15,4 +15,9 @@ Specification of 'normal' wind turbine operating behaviour for rapid anomaly det
    report
    notebooks
 
+Indices and tables
+------------------
 
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
