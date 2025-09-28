@@ -10,7 +10,9 @@ for supervised learning.
 import pandas as pd
 
 # import downtime data
-dwntm = pd.read_csv("data/processed/downtime_timeseries.csv", skip_blank_lines=True)
+dwntm = pd.read_csv(
+    "data/processed/downtime_timeseries.csv", skip_blank_lines=True
+)
 
 # convert data type object to datetime
 dwntm["timestamp_start"] = pd.to_datetime(dwntm["timestamp_start"])
@@ -66,7 +68,9 @@ dwntm = dwntm.sort_values(["timestamp", "turbine_id", "period"])
 dwntm = dwntm.drop_duplicates(["timestamp", "turbine_id"], keep="first")
 
 # import SCADA
-scada = pd.read_csv("data/processed/SCADA_timeseries.csv", skip_blank_lines=True)
+scada = pd.read_csv(
+    "data/processed/SCADA_timeseries.csv", skip_blank_lines=True
+)
 
 # drop unnecessary columns
 scada = scada.drop(columns=["ws_1", "ws_2", "wd_1", "wd_2"])
@@ -82,7 +86,9 @@ merged = pd.merge(scada, dwntm, how="outer")
 
 # drop downtime entries with no SCADA readings - in case of duplicates
 merged = merged.drop(
-    merged[(merged["turbine_id"].notnull()) & (merged["turbine"].isnull())].index
+    merged[
+        (merged["turbine_id"].notnull()) & (merged["turbine"].isnull())
+    ].index
 )
 
 # drop old turbine ID column

@@ -197,7 +197,9 @@ for x in list1:  # filter only data for turbine x
             rf1 = rf.fit(Xt, Yt)  # fit to classifier and predict
             Yp = rf1.predict(X_test)
             print(
-                "Classification report for turbine {}, turbine category {}".format(x, n)
+                "Classification report for turbine {}, turbine category {}".format(
+                    x, n
+                )
             )
             print(classification_report(Y_test, Yp, digits=6))
         print("-------------------------------------------------------------")

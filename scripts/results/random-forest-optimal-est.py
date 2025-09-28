@@ -192,7 +192,9 @@ for x in list1:  # filter only data for turbine x
     p, r, f = [], [], []
 
     for e in est:
-        rf = RandomForestClassifier(criterion="entropy", n_jobs=-1, n_estimators=e)
+        rf = RandomForestClassifier(
+            criterion="entropy", n_jobs=-1, n_estimators=e
+        )
         p1, r1, f1 = [], [], []
         for m, n in list5:
             Ym = Y[:, m]
@@ -209,7 +211,9 @@ for x in list1:  # filter only data for turbine x
                     Xt, Yt = X_train, Y_train
                 rf1 = rf.fit(Xt, Yt)  # fit to classifier and predict
                 Yp = rf1.predict(X_test)
-                p_s = precision_score(Y_test[:, m], Yp[:, m], average="weighted")
+                p_s = precision_score(
+                    Y_test[:, m], Yp[:, m], average="weighted"
+                )
                 r_s = recall_score(Y_test[:, m], Yp[:, m], average="weighted")
                 f_s = f1_score(Y_test[:, m], Yp[:, m], average="weighted")
                 p2.append(p_s), r2.append(r_s), f2.append(f_s)
@@ -223,6 +227,10 @@ for x in list1:  # filter only data for turbine x
     (pre.append(max(p)),)
     (rec.append(max(r)),)
     f1s.append(max(f))
-    print("Classification report for turbine {}, turbine category {}".format(x, n))
+    print(
+        "Classification report for turbine {}, turbine category {}".format(
+            x, n
+        )
+    )
     print(classification_report(Y_test, Yp, digits=6))
     print("----------------------------------------------------------------")

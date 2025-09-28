@@ -7,3 +7,4 @@ black[jupyter]
 pylint
 flake8
 nbqa[toolchain]
+pydocstyle

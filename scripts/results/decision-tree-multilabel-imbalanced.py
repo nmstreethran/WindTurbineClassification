@@ -203,7 +203,9 @@ for x in list1:
             Yt = Y_test[:, m]
             Ypr = Yp[:, m]
             print(
-                "Classification report for turbine {}, turbine category {}".format(x, m)
+                "Classification report for turbine {}, turbine category {}".format(
+                    x, m
+                )
             )
             print(classification_report(Yt, Ypr, digits=6))
         print("-------------------------------------------------------------")

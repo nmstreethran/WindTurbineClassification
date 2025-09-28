@@ -6,7 +6,11 @@ import subprocess
 import numpy as np
 import pandas as pd
 from sklearn import model_selection, preprocessing
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+)
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
 
 # import data
@@ -187,8 +191,10 @@ for x, y in list3:
     Xn = preprocessing.normalize(X)
     validation_size = 0.20
     seed = 7
-    X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(
-        Xn, Y, test_size=validation_size, random_state=seed
+    X_train, X_validation, Y_train, Y_validation = (
+        model_selection.train_test_split(
+            Xn, Y, test_size=validation_size, random_state=seed
+        )
     )
 
     # fit using gini criterion

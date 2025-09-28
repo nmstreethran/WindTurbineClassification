@@ -24,10 +24,18 @@ eh1 = np.array(d4["f"])
 el1 = np.array(d5["f"])
 
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
-plt.errorbar(x, y, linestyle="None", color="#098A63", marker="o", label="balanced")
-plt.errorbar(x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3)
-plt.errorbar(x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced")
-plt.errorbar(x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3)
+plt.errorbar(
+    x, y, linestyle="None", color="#098A63", marker="o", label="balanced"
+)
+plt.errorbar(
+    x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3
+)
+plt.errorbar(
+    x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced"
+)
+plt.errorbar(
+    x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3
+)
 plt.xticks(list(range(1, 26)))
 plt.xlabel("Turbine")
 plt.ylabel("F1 score")
@@ -51,10 +59,18 @@ eh1 = np.array(d4["f"])
 el1 = np.array(d5["f"])
 
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
-plt.errorbar(x, y, linestyle="None", color="#098A63", marker="o", label="balanced")
-plt.errorbar(x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3)
-plt.errorbar(x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced")
-plt.errorbar(x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3)
+plt.errorbar(
+    x, y, linestyle="None", color="#098A63", marker="o", label="balanced"
+)
+plt.errorbar(
+    x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3
+)
+plt.errorbar(
+    x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced"
+)
+plt.errorbar(
+    x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3
+)
 plt.xticks(range(1, 15), sorted(d0["fault"].tolist(), key=int))
 plt.xlabel("Turbine category")
 plt.ylabel("F1 score")
@@ -81,10 +97,18 @@ eh1 = np.array(d4["f"])
 el1 = np.array(d5["f"])
 
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
-plt.errorbar(x, y, linestyle="None", color="#098A63", marker="o", label="balanced")
-plt.errorbar(x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3)
-plt.errorbar(x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced")
-plt.errorbar(x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3)
+plt.errorbar(
+    x, y, linestyle="None", color="#098A63", marker="o", label="balanced"
+)
+plt.errorbar(
+    x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3
+)
+plt.errorbar(
+    x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced"
+)
+plt.errorbar(
+    x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3
+)
 plt.xticks(list(range(1, 26)))
 plt.xlabel("Turbine")
 plt.ylabel("F1 score")
@@ -101,10 +125,18 @@ d5 = d.groupby("fault", as_index=False)["f"].min()
 
 
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
-plt.errorbar(x, y, linestyle="None", color="#098A63", marker="o", label="balanced")
-plt.errorbar(x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3)
-plt.errorbar(x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced")
-plt.errorbar(x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3)
+plt.errorbar(
+    x, y, linestyle="None", color="#098A63", marker="o", label="balanced"
+)
+plt.errorbar(
+    x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3
+)
+plt.errorbar(
+    x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced"
+)
+plt.errorbar(
+    x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3
+)
 plt.xticks(range(1, 15), sorted(d0["fault"].tolist(), key=int))
 plt.xlabel("Turbine category")
 plt.ylabel("F1 score")
@@ -131,10 +163,18 @@ eh1 = np.array(d4["f"])
 el1 = np.array(d5["f"])
 
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
-plt.errorbar(x, y, linestyle="None", color="#098A63", marker="o", label="balanced")
-plt.errorbar(x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3)
-plt.errorbar(x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced")
-plt.errorbar(x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3)
+plt.errorbar(
+    x, y, linestyle="None", color="#098A63", marker="o", label="balanced"
+)
+plt.errorbar(
+    x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3
+)
+plt.errorbar(
+    x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced"
+)
+plt.errorbar(
+    x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3
+)
 plt.xticks(list(range(1, 26)))
 plt.xlabel("Turbine")
 plt.ylabel("F1 score")
@@ -158,10 +198,18 @@ eh1 = np.array(d4["f"])
 el1 = np.array(d5["f"])
 
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
-plt.errorbar(x, y, linestyle="None", color="#098A63", marker="o", label="balanced")
-plt.errorbar(x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3)
-plt.errorbar(x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced")
-plt.errorbar(x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3)
+plt.errorbar(
+    x, y, linestyle="None", color="#098A63", marker="o", label="balanced"
+)
+plt.errorbar(
+    x, y, [y - el, eh - y], linestyle="None", ecolor="#098A63", capsize=3
+)
+plt.errorbar(
+    x, y1, linestyle="None", color="#3F2B78", marker="o", label="imbalanced"
+)
+plt.errorbar(
+    x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="#3F2B78", capsize=3
+)
 plt.xticks(range(1, 15), sorted(d0["fault"].tolist(), key=int))
 plt.xlabel("Turbine category")
 plt.ylabel("F1 score")
@@ -195,8 +243,12 @@ eh2 = np.array(d7["f1"])
 el2 = np.array(d8["f1"])
 
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
-plt.errorbar(x, y2, linestyle="None", color="#098A63", marker="o", label="balanced")
-plt.errorbar(x, y2, [y2 - el2, eh2 - y2], linestyle="None", ecolor="#098A63", capsize=3)
+plt.errorbar(
+    x, y2, linestyle="None", color="#098A63", marker="o", label="balanced"
+)
+plt.errorbar(
+    x, y2, [y2 - el2, eh2 - y2], linestyle="None", ecolor="#098A63", capsize=3
+)
 plt.errorbar(
     x,
     y,
@@ -205,7 +257,9 @@ plt.errorbar(
     marker="o",
     label="imbalanced, without k optimisation",
 )
-plt.errorbar(x, y, [y - el, eh - y], linestyle="None", ecolor="#3F2B78", capsize=3)
+plt.errorbar(
+    x, y, [y - el, eh - y], linestyle="None", ecolor="#3F2B78", capsize=3
+)
 plt.errorbar(
     x,
     y1,
@@ -214,7 +268,9 @@ plt.errorbar(
     marker="o",
     label="imbalanced, with k optimisation",
 )
-plt.errorbar(x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="C0", capsize=3)
+plt.errorbar(
+    x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="C0", capsize=3
+)
 plt.xticks(list(range(1, 26)))
 plt.xlabel("Turbine")
 plt.ylabel("F1 score")
@@ -245,8 +301,12 @@ eh1 = np.array(d4["f"])
 el1 = np.array(d5["f"])
 
 fig, ax = plt.subplots(figsize=(10, 4), dpi=500)
-plt.errorbar(x, y2, linestyle="None", color="#098A63", marker="o", label="balanced")
-plt.errorbar(x, y2, [y2 - el2, eh2 - y2], linestyle="None", ecolor="#098A63", capsize=3)
+plt.errorbar(
+    x, y2, linestyle="None", color="#098A63", marker="o", label="balanced"
+)
+plt.errorbar(
+    x, y2, [y2 - el2, eh2 - y2], linestyle="None", ecolor="#098A63", capsize=3
+)
 plt.errorbar(
     x,
     y,
@@ -255,7 +315,9 @@ plt.errorbar(
     marker="o",
     label="imbalanced, without k optimisation",
 )
-plt.errorbar(x, y, [y - el, eh - y], linestyle="None", ecolor="#3F2B78", capsize=3)
+plt.errorbar(
+    x, y, [y - el, eh - y], linestyle="None", ecolor="#3F2B78", capsize=3
+)
 plt.errorbar(
     x,
     y1,
@@ -264,7 +326,9 @@ plt.errorbar(
     marker="o",
     label="imbalanced, with k optimisation",
 )
-plt.errorbar(x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="C0", capsize=3)
+plt.errorbar(
+    x, y1, [y1 - el1, eh1 - y1], linestyle="None", ecolor="C0", capsize=3
+)
 plt.xticks(range(1, 15), sorted(d0["fault"].tolist(), key=int))
 plt.xlabel("Turbine category")
 plt.ylabel("F1 score")

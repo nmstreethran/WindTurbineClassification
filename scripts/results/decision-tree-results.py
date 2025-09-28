@@ -207,7 +207,9 @@ for x in list1:
             dt1 = dt.fit(Xt, Yt)
             Yp = dt1.predict(X_test)
             print(
-                "Classification report for turbine {}, turbine category {}".format(x, n)
+                "Classification report for turbine {}, turbine category {}".format(
+                    x, n
+                )
             )
             print(classification_report(Y_test, Yp, digits=6))
         print("-------------------------------------------------------------")

@@ -7,7 +7,11 @@ from sklearn import model_selection, preprocessing
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix,
+)
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
@@ -204,8 +208,10 @@ for x in list1:
     Xn = preprocessing.normalize(X)
     validation_size = 0.20
     seed = 7
-    X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(
-        Xn, Y, test_size=validation_size, random_state=seed
+    X_train, X_validation, Y_train, Y_validation = (
+        model_selection.train_test_split(
+            Xn, Y, test_size=validation_size, random_state=seed
+        )
     )
 
     models = []
@@ -230,7 +236,9 @@ for x in list1:
         )
         results.append(cv_results)
         names.append(name)
-        msg = "{}: {:f} ({:f})".format(name, cv_results.mean(), cv_results.std())
+        msg = "{}: {:f} ({:f})".format(
+            name, cv_results.mean(), cv_results.std()
+        )
         print(msg)
 
     # compare algorithms

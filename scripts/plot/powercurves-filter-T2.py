@@ -172,7 +172,9 @@ for x, y in list3:
     plt.ylabel("Average active power (kW)")
     plt.title("w/o curtailment and anomalies")
 
-    fig.suptitle("Power curves for turbine %s" % x + " with turbine category %s" % y)
+    fig.suptitle(
+        "Power curves for turbine %s" % x + " with turbine category %s" % y
+    )
     plt.tight_layout()
     plt.subplots_adjust(top=0.88)
     plt.show()

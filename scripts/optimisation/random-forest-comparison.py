@@ -221,7 +221,10 @@ for x in list1:
             rf1 = rf.fit(X_train, Y_train)
             pred = rf1.predict(X_test)
             # accuracy score
-            p2 = np.sum(np.equal(np.array(Y_test), pred)) / np.array(Y_test).size
+            p2 = (
+                np.sum(np.equal(np.array(Y_test), pred))
+                / np.array(Y_test).size
+            )
             # add to list
             p1.append(p2)
         # average score across all cross validation folds
