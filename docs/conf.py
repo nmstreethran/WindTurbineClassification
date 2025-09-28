@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'WindTurbineClassification'
+project = "WindTurbineClassification"
 copyright = "2017-2025, Nithiya Streethran"
-author = 'Nithiya Streethran'
+author = "Nithiya Streethran"
 
 github_url = f"https://github.com/nmstreethran/{project}"
 
@@ -28,9 +28,8 @@ myst_enable_extensions = [
     "dollarmath",
 ]
 
-templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
+templates_path = ["_templates"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -40,7 +39,7 @@ html_title = project
 
 html_theme = "pydata_sphinx_theme"
 
-html_static_path = ['_static']
+html_static_path = ["_static"]
 
 html_theme_options = {
     "icon_links": [
