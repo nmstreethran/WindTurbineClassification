@@ -7,7 +7,6 @@ this merging also automates the labelling process needed to train classifiers
 for supervised learning.
 """
 
-# import libraries
 import pandas as pd
 
 # import downtime data
@@ -27,29 +26,41 @@ dwntm["timestamp_end"] = dwntm["timestamp_end"].dt.round("10min")
 dwntm["period"] = dwntm["timestamp_end"] - dwntm["timestamp_start"]
 
 # downtime ranges to every ten minutes between start and end timestamps
-dwntm = pd.concat([pd.DataFrame({
-    "timestamp": pd.date_range(
-        row.timestamp_start, row.timestamp_end, freq="10min"
-    ),
-    "turbine_id": row.turbine_id,
-    "period": row.period,
-    "TurbineCategory_id": row.TurbineCategory_id,
-    "EnvironmentalCategory_id": row.EnvironmentalCategory_id,
-    "InfrastructureCategory_id": row.InfrastructureCategory_id,
-    "GridCategory_id": row.GridCategory_id,
-    "AvailabilityCategory_id": row.AvailabilityCategory_id,
-    "alarm_id": row.alarm_id,
-    "workorder_id": row.workorder_id,
-    "comment": row.comment
-    },
-    columns=[
-        "timestamp", "turbine_id", "period", "TurbineCategory_id",
-        "EnvironmentalCategory_id", "InfrastructureCategory_id",
-        "GridCategory_id", "AvailabilityCategory_id", "alarm_id",
-        "workorder_id", "comment"
-    ])
-    for i, row in dwntm.iterrows()
-    ], ignore_index=True
+dwntm = pd.concat(
+    [
+        pd.DataFrame(
+            {
+                "timestamp": pd.date_range(
+                    row.timestamp_start, row.timestamp_end, freq="10min"
+                ),
+                "turbine_id": row.turbine_id,
+                "period": row.period,
+                "TurbineCategory_id": row.TurbineCategory_id,
+                "EnvironmentalCategory_id": row.EnvironmentalCategory_id,
+                "InfrastructureCategory_id": row.InfrastructureCategory_id,
+                "GridCategory_id": row.GridCategory_id,
+                "AvailabilityCategory_id": row.AvailabilityCategory_id,
+                "alarm_id": row.alarm_id,
+                "workorder_id": row.workorder_id,
+                "comment": row.comment,
+            },
+            columns=[
+                "timestamp",
+                "turbine_id",
+                "period",
+                "TurbineCategory_id",
+                "EnvironmentalCategory_id",
+                "InfrastructureCategory_id",
+                "GridCategory_id",
+                "AvailabilityCategory_id",
+                "alarm_id",
+                "workorder_id",
+                "comment",
+            ],
+        )
+        for i, row in dwntm.iterrows()
+    ],
+    ignore_index=True,
 )
 
 # sort and drop duplicates for same timestamp and turbine
@@ -74,38 +85,42 @@ scada["turbine_id"] = scada["turbine"]
 merged = pd.merge(scada, dwntm, how="outer")
 
 # drop downtime entries with no SCADA readings - in case of duplicates
-merged = merged.drop(merged[
-    (merged["turbine_id"].notnull()) & (merged["turbine"].isnull())
-].index)
+merged = merged.drop(
+    merged[
+        (merged["turbine_id"].notnull()) & (merged["turbine"].isnull())
+    ].index
+)
 
 # drop old turbine ID column
 merged = merged.drop("turbine", axis=1)
 
 # rearrange columns
-merged = merged[[
-    "timestamp",
-    "turbine_id",
-    "ap_av",
-    "ap_dev",
-    "ap_max",
-    "reactive_power",
-    "ws_av",
-    "wd_av",
-    "gen_sp",
-    "nac_pos",
-    "pitch",
-    "rs_av",
-    "runtime",
-    "period",
-    "TurbineCategory_id",
-    "EnvironmentalCategory_id",
-    "InfrastructureCategory_id",
-    "GridCategory_id",
-    "AvailabilityCategory_id",
-    "alarm_id",
-    "workorder_id",
-    "comment"
-]]
+merged = merged[
+    [
+        "timestamp",
+        "turbine_id",
+        "ap_av",
+        "ap_dev",
+        "ap_max",
+        "reactive_power",
+        "ws_av",
+        "wd_av",
+        "gen_sp",
+        "nac_pos",
+        "pitch",
+        "rs_av",
+        "runtime",
+        "period",
+        "TurbineCategory_id",
+        "EnvironmentalCategory_id",
+        "InfrastructureCategory_id",
+        "GridCategory_id",
+        "AvailabilityCategory_id",
+        "alarm_id",
+        "workorder_id",
+        "comment",
+    ]
+]
 
 # write final dataframe to CSV
 merged.to_csv("data/processed/SCADA_downtime_merged.csv", index=False)

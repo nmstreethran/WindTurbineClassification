@@ -7,11 +7,12 @@
 
 ***Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms***
 
-by Nithiya Streethran (nmstreethran@gmail.com)
+by Nithiya Streethran (<nmstreethran@gmail.com>)
 
 This work is derived from my dissertation for the degree of Master of Science (MSc) in Renewable Energy Engineering at Heriot-Watt University, which was completed during a technical placement at Natural Power between May and August 2017.
 
-**Unfortunately, the datasets are proprietary industry data and I do not own the rights to distribute them to the public. Please do not contact me to request the datasets.**
+> [!IMPORTANT]
+> Unfortunately, the datasets are proprietary industry data and I do not own the rights to distribute them to the public. **Please do not contact me to request the datasets.**
 
 ## Abstract
 
