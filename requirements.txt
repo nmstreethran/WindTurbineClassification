@@ -3,6 +3,7 @@ matplotlib
 pandas
 jupyterlab
 openpyxl
-black
+black[jupyter]
 pylint
 flake8
+nbqa[toolchain]
