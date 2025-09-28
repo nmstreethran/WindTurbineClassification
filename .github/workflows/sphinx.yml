@@ -6,7 +6,7 @@ name: 'Sphinx: Render docs'
 on:
   push:
     branches:
-      - 'main'
+      - 'current'
     paths:
       - 'docs/**'
 
