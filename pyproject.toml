@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "WindTurbineClassification"
+version = "2024.09.0"
+requires-python = ">= 3.11"
+dependencies = [
+  "imbalanced-learn",
+  "matplotlib",
+  "pandas",
+  "jupyterlab",
+  "openpyxl",
+]
+authors = [
+  {name = "Nithiya Streethran", email = "nmstreethran@gmail.com"},
+]
+readme = "README.md"
+description = "wind turbine fault prediction using machine learning"
+keywords = ["renewable energy", "scotland", "united kingdom", "onshore wind", "wind power", "machine learning", "scada", "fault prediction", "classification", "wind turbines", "engineering"]
+classifiers = [
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+docs = [
+  "myst-nb",
+  "pydata-sphinx-theme",
+]
+test = [
+  "black[jupyter]",
+  "flake8",
+  "pylint",
+  "nbqa[toolchain]",
+]
+
+[project.urls]
+Documentation = "https://nmstreethran.github.io/WindTurbineClassification"
+Repository = "https://github.com/nmstreethran/WindTurbineClassification.git"
+Issues = "https://github.com/nmstreethran/WindTurbineClassification/issues"
+Zenodo = "https://doi.org/10.5281/zenodo.2875795"
+
+[tool.black]
+line-length = 79

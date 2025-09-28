@@ -1,4 +1,4 @@
-name: wind-turbine-classification
+name: WindTurbineClassification
 channels:
   - conda-forge
   - defaults
