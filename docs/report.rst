@@ -7,8 +7,8 @@ by Nithiya Streethran
 
 - GitHub: https://github.com/nmstreethran/WindTurbineClassification
 - Docs: https://nmstreethran.github.io/WindTurbineClassification
-- Zenodo: https://doi.org/10.5281/zenodo.2875795
-- PDF: https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf
+- Zenodo DOI: `10.5281/zenodo.2875795 <https://doi.org/10.5281/zenodo.2875795>`_
+- PDF report: `nms_dissertation.pdf <https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf>`_
 
 Abstract
 --------
