@@ -1,0 +1,2 @@
+myst-nb
+pydata-sphinx-theme
