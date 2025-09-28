@@ -1090,207 +1090,74 @@ transitions from red (lower scores) to yellow (intermediate) to green
 References
 ----------
 
-.. [1]
-   Kim, K., Parthasarathy, G., Uluyol, O., Foslien, W., Sheng, S. &
-   Fleming, P. (2012). `Use of SCADA Data for Failure Detection in Wind
-   Turbines <https://doi.org/10.1115/ES2011-54243>`__. 2071-2079.
+.. [1] Kim, K., Parthasarathy, G., Uluyol, O., Foslien, W., Sheng, S. & Fleming, P. (2012). `Use of SCADA Data for Failure Detection in Wind Turbines <https://doi.org/10.1115/ES2011-54243>`__. 2071-2079.
 
-.. [2]
-   Leahy, K., Hu, R. L., Konstantakopoulos, I. C., Spanos, C. J. &
-   Agogino, A. M. (2016). `Diagnosing wind turbine faults using machine
-   learning techniques applied to operational
-   data <https://doi.org/10.1109/ICPHM.2016.7542860>`__. 2016 IEEE
-   International Conference on Prognostics and Health Management
-   (ICPHM), 1-8.
+.. [2] Leahy, K., Hu, R. L., Konstantakopoulos, I. C., Spanos, C. J. & Agogino, A. M. (2016). `Diagnosing wind turbine faults using machine learning techniques applied to operational data <https://doi.org/10.1109/ICPHM.2016.7542860>`__. 2016 IEEE International Conference on Prognostics and Health Management (ICPHM), 1-8.
 
-.. [3]
-   Kim, K., Parthasarathy, G., Uluyol, O., Foslien, W., Sheng, S. &
-   Fleming, P. (2012). `Use of SCADA Data for Failure Detection in Wind
-   Turbines <https://doi.org/10.1115/ES2011-54243>`__. 2071-2079.
+.. [3] Dienst, S. & Beseler, J. (2016). `Automatic Anomaly Detection in Offshore Wind SCADA Data <https://windeurope.org/summit2016/conference/submit-an-abstract/pdf/626738292593.pdf>`__.
 
-.. [4]
-   Kim, K., Parthasarathy, G., Uluyol, O., Foslien, W., Sheng, S. &
-   Fleming, P. (2012). `Use of SCADA Data for Failure Detection in Wind
-   Turbines <https://doi.org/10.1115/ES2011-54243>`__. 2071-2079.
+.. [4] Tautz-Weinert, J. & Watson, S. J. (2017). `Using SCADA data for wind turbine condition monitoring - a review <https://doi.org/10.1049/iet-rpg.2016.0248>`__. IET Renewable Power Generation, 11(4), 382-394.
 
-.. [5]
-   Dienst, S. & Beseler, J. (2016). `Automatic Anomaly Detection in
-   Offshore Wind SCADA
-   Data <https://windeurope.org/summit2016/conference/submit-an-abstract/pdf/626738292593.pdf>`__.
+.. [5] Wind Turbine Condition Monitoring. (2015). [White Paper]. National Instruments.
 
-.. [6]
-   Dienst, S. & Beseler, J. (2016). `Automatic Anomaly Detection in
-   Offshore Wind SCADA
-   Data <https://windeurope.org/summit2016/conference/submit-an-abstract/pdf/626738292593.pdf>`__.
+.. [6] García Márquez, F. P., Tobias, A. M., Pinar Pérez, J. M. & Papaelias, M. (2012). `Condition monitoring of wind turbines: Techniques and methods <https://doi.org/10.1016/j.renene.2012.03.003>`__. Renewable Energy, 46, 169-178.
 
-.. [7]
-   Tautz-Weinert, J. & Watson, S. J. (2017). `Using SCADA data for wind
-   turbine condition monitoring - a
-   review <https://doi.org/10.1049/iet-rpg.2016.0248>`__. IET Renewable
-   Power Generation, 11(4), 382-394.
+.. [7] Godwin, J. L. & Matthews, P. (2013). Classification and Detection of Wind Turbine Pitch Faults Through SCADA Data Analysis. International Journal of Prognostics and Health Management, 4.
 
-.. [8]
-   Leahy, K., Hu, R. L., Konstantakopoulos, I. C., Spanos, C. J. &
-   Agogino, A. M. (2016). `Diagnosing wind turbine faults using machine
-   learning techniques applied to operational
-   data <https://doi.org/10.1109/ICPHM.2016.7542860>`__. 2016 IEEE
-   International Conference on Prognostics and Health Management
-   (ICPHM), 1-8.
+.. [8] Yang, W., Tavner, P. J., Crabtree, C. J., Feng, Y. & Qiu, Y. (2014). `Wind turbine condition monitoring: Technical and commercial challenges <https://doi.org/10.1002/we.1508>`__. Wind Energy, 17(5), 673-693.
 
-.. [9]
-   Wind Turbine Condition Monitoring. (2015). [White Paper]. National
-   Instruments.
+.. [9] Gill, S., Stephen, B. & Galloway, S. (2012). `Wind turbine condition assessment through power curve copula modeling <https://doi.org/10.1109/TSTE.2011.2167164>`__. IEEE Transactions on Sustainable Energy, 3, 94-101.
 
-.. [10]
-   Kim, K., Parthasarathy, G., Uluyol, O., Foslien, W., Sheng, S. &
-   Fleming, P. (2012). `Use of SCADA Data for Failure Detection in Wind
-   Turbines <https://doi.org/10.1115/ES2011-54243>`__. 2071-2079.
+.. [10] Kusiak, A. & Li, W. (2011). `The prediction and diagnosis of wind turbine faults <https://doi.org/10.1016/j.renene.2010.05.014>`__. Renewable Energy, 36(1), 16-23.
 
-.. [11]
-   Wind Turbine Condition Monitoring. (2015). [White Paper]. National
-   Instruments.
+.. [11] `Welcome to Python.org <https://www.python.org/>`__. (n.d.).
 
-.. [12]
-   García Márquez, F. P., Tobias, A. M., Pinar Pérez, J. M. & Papaelias,
-   M. (2012). `Condition monitoring of wind turbines: Techniques and
-   methods <https://doi.org/10.1016/j.renene.2012.03.003>`__. Renewable
-   Energy, 46, 169-178.
+.. [12] Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M. & Perrot, M. (2011). `Scikit-learn: Machine Learning in Python <https://jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf>`__. Journal of Machine Learning Research, 12, 2825-2830.
 
-.. [13]
-   Godwin, J. L. & Matthews, P. (2013). Classification and Detection of
-   Wind Turbine Pitch Faults Through SCADA Data Analysis. International
-   Journal of Prognostics and Health Management, 4.
+.. [13] `1.12. Multiclass and multilabel algorithms - Scikit-learn 0.18.2 documentation <https://scikit-learn.org/0.18/modules/multiclass.html>`__. (n.d.).
 
-.. [14]
-   Leahy, K., Hu, R. L., Konstantakopoulos, I. C., Spanos, C. J. &
-   Agogino, A. M. (2016). `Diagnosing wind turbine faults using machine
-   learning techniques applied to operational
-   data <https://doi.org/10.1109/ICPHM.2016.7542860>`__. 2016 IEEE
-   International Conference on Prognostics and Health Management
-   (ICPHM), 1-8.
+.. [14] `Decision Tree Classifier <http://mines.humanoriented.com/classes/2010/fall/csci568/portfolio_exports/lguo/decisionTree.html>`__. (2010).
 
-.. [15]
-   García Márquez, F. P., Tobias, A. M., Pinar Pérez, J. M. & Papaelias,
-   M. (2012). `Condition monitoring of wind turbines: Techniques and
-   methods <https://doi.org/10.1016/j.renene.2012.03.003>`__. Renewable
-   Energy, 46, 169-178.
+.. [15] `Random forests - Classification description <https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm>`__. (n.d.).
 
-.. [16]
-   Tautz-Weinert, J. & Watson, S. J. (2017). `Using SCADA data for wind
-   turbine condition monitoring - a
-   review <https://doi.org/10.1049/iet-rpg.2016.0248>`__. IET Renewable
-   Power Generation, 11(4), 382-394.
+.. [16] Sutton, O. (2012). `Introduction to k Nearest Neighbour Classification and Condensed Nearest Neighbour Data Reduction <http://www.math.le.ac.uk/people/ag153/homepage/KNN/OliverKNN_Talk.pdf>`__.
 
-.. [17]
-   Leahy, K., Hu, R. L., Konstantakopoulos, I. C., Spanos, C. J. &
-   Agogino, A. M. (2016). `Diagnosing wind turbine faults using machine
-   learning techniques applied to operational
-   data <https://doi.org/10.1109/ICPHM.2016.7542860>`__. 2016 IEEE
-   International Conference on Prognostics and Health Management
-   (ICPHM), 1-8.
+.. [17] `1.6. Nearest Neighbors - Scikit-learn 0.19.0 documentation <https://scikit-learn.org/0.19/modules/neighbors.html>`__. (n.d.).
 
-.. [18]
-   Tautz-Weinert, J. & Watson, S. J. (2017). `Using SCADA data for wind
-   turbine condition monitoring - a
-   review <https://doi.org/10.1049/iet-rpg.2016.0248>`__. IET Renewable
-   Power Generation, 11(4), 382-394.
+.. [18] `1.10. Decision Trees - Scikit-learn 0.18.2 documentation <https://scikit-learn.org/0.18/modules/tree.html>`__. (n.d.).
 
-.. [19]
-   Tautz-Weinert, J. & Watson, S. J. (2017). `Using SCADA data for wind
-   turbine condition monitoring - a
-   review <https://doi.org/10.1049/iet-rpg.2016.0248>`__. IET Renewable
-   Power Generation, 11(4), 382-394.
+.. [19] Lemaitre, G., Nogueira, F., Oliveira, D. & Aridas, C. (n.d.). `Welcome to imbalanced-learn documentation! <https://imbalanced-learn.org/stable/>`__.
 
-.. [20]
-   Yang, W., Tavner, P. J., Crabtree, C. J., Feng, Y. & Qiu, Y. (2014).
-   `Wind turbine condition monitoring: Technical and commercial
-   challenges <https://doi.org/10.1002/we.1508>`__. Wind Energy, 17(5),
-   673-693.
+.. [20] `6.4. Introduction to Time Series Analysis <https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4.htm>`__. (n.d.).
 
-.. [21]
-   Leahy, K., Hu, R. L., Konstantakopoulos, I. C., Spanos, C. J. &
-   Agogino, A. M. (2016). `Diagnosing wind turbine faults using machine
-   learning techniques applied to operational
-   data <https://doi.org/10.1109/ICPHM.2016.7542860>`__. 2016 IEEE
-   International Conference on Prognostics and Health Management
-   (ICPHM), 1-8.
+.. [21] `3.1. Cross-validation: Evaluating estimator performance - Scikit-learn 0.18.2 documentation <https://scikit-learn.org/0.18/modules/cross_validation.html>`__. (n.d.).
 
-.. [22]
-   Gill, S., Stephen, B. & Galloway, S. (2012). `Wind turbine condition
-   assessment through power curve copula
-   modeling <https://doi.org/10.1109/TSTE.2011.2167164>`__. IEEE
-   Transactions on Sustainable Energy, 3, 94-101.
+.. [22] Puget, J. F. (2016, July 5). Overfitting In Machine Learning - IT Best Kept Secret Is Optimization - CT904.
 
-.. [23]
-   Kusiak, A. & Li, W. (2011). `The prediction and diagnosis of wind
-   turbine faults <https://doi.org/10.1016/j.renene.2010.05.014>`__.
-   Renewable Energy, 36(1), 16-23.
+.. [23] Liang, Y. (2016). `Machine Learning Basics - Lecture 6: Overfitting <https://www.cs.princeton.edu/courses/archive/spring16/cos495/slides/ML_basics_lecture6_overfitting.pdf>`__.
 
-.. [24]
-   Godwin, J. L. & Matthews, P. (2013). Classification and Detection of
-   Wind Turbine Pitch Faults Through SCADA Data Analysis. International
-   Journal of Prognostics and Health Management, 4.
+.. [24] `Normalize Data - ML Studio (classic) - Azure <https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/normalize-data>`__. (2017, June 2).
 
-.. [25]
-   Kusiak, A. & Li, W. (2011). `The prediction and diagnosis of wind
-   turbine faults <https://doi.org/10.1016/j.renene.2010.05.014>`__.
-   Renewable Energy, 36(1), 16-23.
+.. [25] `4.3. Preprocessing data - Scikit-learn 0.19.0 documentation <https://scikit-learn.org/0.19/modules/preprocessing.html>`__. (n.d.).
 
-.. [26]
-   Leahy, K., Hu, R. L., Konstantakopoulos, I. C., Spanos, C. J. &
-   Agogino, A. M. (2016). `Diagnosing wind turbine faults using machine
-   learning techniques applied to operational
-   data <https://doi.org/10.1109/ICPHM.2016.7542860>`__. 2016 IEEE
-   International Conference on Prognostics and Health Management
-   (ICPHM), 1-8.
+.. [26] `3.3. Model evaluation: Quantifying the quality of predictions-Scikit-learn 0.19.2 documentation <https://scikit-learn.org/0.19/modules/model_evaluation.html>`__. (n.d.).
 
-.. [27]
-   `Welcome to Python.org <https://www.python.org/>`__. (n.d.).
+.. [27] de Ruiter, A. (2015, February 9). Performance measures in Azure ML: Accuracy, Precision, Recall and F1 Score.
 
-.. [28]
-   Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B.,
-   Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V.,
-   Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M. & Perrot, M.
-   (2011). `Scikit-learn: Machine Learning in
-   Python <https://jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf>`__.
-   Journal of Machine Learning Research, 12, 2825-2830.
+.. [28] `Performance Measures for Machine Learning <https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf>`__. (n.d.).
 
-.. [29]
-   `1.12. Multiclass and multilabel algorithms - Scikit-learn 0.18.2
-   documentation <https://scikit-learn.org/0.18/modules/multiclass.html>`__.
-   (n.d.).
+.. [29] SAS Help Center: Precision, Recall, and the F1 Score.
 
-.. [30]
-   `Decision Tree
-   Classifier <http://mines.humanoriented.com/classes/2010/fall/csci568/portfolio_exports/lguo/decisionTree.html>`__.
-   (2010).
+.. [30] Rudy, J. (2013). `Plotting feature importance - Py-earth 0.1.0 documentation <https://contrib.scikit-learn.org/py-earth/auto_examples/plot_feature_importance.html>`__.
 
-.. [31]
-   `Random forests - Classification
-   description <https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm>`__.
-   (n.d.).
+.. [31] Gutierrez-Osuna, R. (n.d.). L8: Nearest neighbors - CSCE 666 Pattern Analysis. CSE@TAMU.
 
-.. [32]
-   Sutton, O. (2012). `Introduction to k Nearest Neighbour
-   Classification and Condensed Nearest Neighbour Data
-   Reduction <http://www.math.le.ac.uk/people/ag153/homepage/KNN/OliverKNN_Talk.pdf>`__.
+.. [32] Maitra, R. (n.d.). Distribution-free Predictive Approaches.
 
-.. [33]
-   `1.6. Nearest Neighbors - Scikit-learn 0.19.0
-   documentation <https://scikit-learn.org/0.19/modules/neighbors.html>`__.
-   (n.d.).
+.. [33] Reactive power - npower Business. (n.d.).
 
-.. [34]
-   `1.10. Decision Trees - Scikit-learn 0.18.2
-   documentation <https://scikit-learn.org/0.18/modules/tree.html>`__.
-   (n.d.).
+.. [34] Overbye, T. & Baldick, R. (n.d.). `EE369 POWER SYSTEM ANALYSIS - Lecture 18: Fault Analysis <https://users.ece.utexas.edu/~baldick/classes/369/Lecture_18.ppt>`__.
 
-.. [35]
-   Lemaitre, G., Nogueira, F., Oliveira, D. & Aridas, C. (n.d.).
-   `Welcome to imbalanced-learn
-   documentation! <https://imbalanced-learn.org/stable/>`__.
+.. [35] `Statistics Show Bearing Problems Cause the Majority of Wind Turbine Gearbox Failures <https://www.energy.gov/eere/wind/articles/statistics-show-bearing-problems-cause-majority-wind-turbine-gearbox-failures>`__. (2015, September 17). Energy.gov.
 
-.. [36]
-   `6.4. Introduction to Time Series
-   Analysis <https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4.htm>`__.
-   (n.d.).
+.. [36] Sheng, S., McDade, M. & Errichello, R. (2011, October). `Wind Turbine Gearbox Failure Modes - A Brief <https://www.nrel.gov/docs/fy12osti/53084.pdf>`__. ASME/STLE 2011 International Joint Tribology Conference, Los Angeles, CA, USA.
