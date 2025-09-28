@@ -15,3 +15,5 @@ dependencies:
   - black-jupyter
   - pylint
   - flake8
+  - myst-nb
+  - pydata-sphinx-theme

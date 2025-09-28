@@ -7,3 +7,5 @@ black[jupyter]
 pylint
 flake8
 nbqa[toolchain]
+myst-nb
+pydata-sphinx-theme
