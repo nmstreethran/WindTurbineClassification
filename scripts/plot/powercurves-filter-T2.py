@@ -1,6 +1,4 @@
-"""Plot power curves for turbine 2 with data filters
-
-"""
+"""Plot power curves for turbine 2 with data filters"""
 
 import itertools
 

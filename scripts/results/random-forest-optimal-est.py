@@ -1,14 +1,16 @@
-"""Random forest classifier optimisation
-
-"""
+"""Random forest classifier optimisation"""
 
 import numpy as np
 import pandas as pd
 from imblearn.over_sampling import RandomOverSampler
 from sklearn import preprocessing
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import (classification_report, f1_score, precision_score,
-                             recall_score)
+from sklearn.metrics import (
+    classification_report,
+    f1_score,
+    precision_score,
+    recall_score,
+)
 from sklearn.model_selection import TimeSeriesSplit
 
 # import data
@@ -211,16 +213,16 @@ for x in list1:  # filter only data for turbine x
                 r_s = recall_score(Y_test[:, m], Yp[:, m], average="weighted")
                 f_s = f1_score(Y_test[:, m], Yp[:, m], average="weighted")
                 p2.append(p_s), r2.append(r_s), f2.append(f_s)
-            p1.append(np.mean(p2)),
-            r1.append(np.mean(r2)),
+            (p1.append(np.mean(p2)),)
+            (r1.append(np.mean(r2)),)
             f1.append(np.mean(f2))
         p.append(np.mean(p1)), r.append(np.mean(r1)), f.append(np.mean(f1))
-    e_p.append(neighbours[p.index(max(p))]),
-    e_r.append(neighbours[r.index(max(r))]),
+    (e_p.append(neighbours[p.index(max(p))]),)
+    (e_r.append(neighbours[r.index(max(r))]),)
     e_f.append(neighbours[f.index(max(f))])
-    pre.append(max(p)),
-    rec.append(max(r)),
+    (pre.append(max(p)),)
+    (rec.append(max(r)),)
     f1s.append(max(f))
-    print("Classification report for turbine %s, turbine category %s" % (x, n))
+    print("Classification report for turbine {}, turbine category {}".format(x, n))
     print(classification_report(Y_test, Yp, digits=6))
     print("----------------------------------------------------------------")

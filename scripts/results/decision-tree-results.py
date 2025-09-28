@@ -1,6 +1,4 @@
-"""Results for decision tree classifier
-
-"""
+"""Results for decision tree classifier"""
 
 import numpy as np
 import pandas as pd
@@ -208,6 +206,8 @@ for x in list1:
             # fit to classifier and predict
             dt1 = dt.fit(Xt, Yt)
             Yp = dt1.predict(X_test)
-            print("Classification report for turbine %s, turbine category %s" % (x, n))
+            print(
+                "Classification report for turbine {}, turbine category {}".format(x, n)
+            )
             print(classification_report(Y_test, Yp, digits=6))
         print("-------------------------------------------------------------")

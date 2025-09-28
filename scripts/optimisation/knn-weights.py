@@ -1,6 +1,4 @@
-"""k-NN: finding optimal weight function ('distance' or 'uniform')
-
-"""
+"""k-NN: finding optimal weight function ('distance' or 'uniform')"""
 
 import numpy as np
 import pandas as pd

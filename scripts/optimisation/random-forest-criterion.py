@@ -1,6 +1,4 @@
-"""Random forests: finding optimal criterion ('gini' or 'entropy')
-
-"""
+"""Random forests: finding optimal criterion ('gini' or 'entropy')"""
 
 import numpy as np
 import pandas as pd

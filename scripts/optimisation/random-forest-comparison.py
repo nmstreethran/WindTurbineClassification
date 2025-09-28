@@ -1,6 +1,4 @@
-"""Comparing random forest classifier performance
-
-"""
+"""Comparing random forest classifier performance"""
 
 import matplotlib.pyplot as plt
 import numpy as np

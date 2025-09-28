@@ -190,6 +190,6 @@ for x in list1:  # filter only data for turbine x
         for m in list4:
             Yt = Y_test[:, m]
             Ypr = Yp[:, m]
-            print("Confusion matrix for turbine %s, turbine category %s" % (x, m))
+            print("Confusion matrix for turbine {}, turbine category {}".format(x, m))
             print(confusion_matrix(Yt, Ypr))
         print("------------------------------------------------------------")

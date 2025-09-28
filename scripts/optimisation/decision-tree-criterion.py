@@ -1,6 +1,4 @@
-"""Decision trees: finding optimal criterion ('gini' or 'entropy')
-
-"""
+"""Decision trees: finding optimal criterion ('gini' or 'entropy')"""
 
 import numpy as np
 import pandas as pd

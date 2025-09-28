@@ -195,6 +195,8 @@ for x in list1:  # filter only data for turbine x
             # (because multilabel is not supported)
             Yt = Y_test[:, m]
             Ypr = Yp[:, m]
-            print("Classification report for turbine %s, turbine category %s" % (x, m))
+            print(
+                "Classification report for turbine {}, turbine category {}".format(x, m)
+            )
             print(classification_report(Yt, Ypr, digits=6))
         print("-----------------------------------------------------------")

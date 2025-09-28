@@ -1,6 +1,4 @@
-"""Finding the normal pitch angle threshold
-
-"""
+"""Finding the normal pitch angle threshold"""
 
 import itertools
 

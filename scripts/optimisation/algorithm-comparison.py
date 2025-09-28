@@ -1,6 +1,4 @@
-"""Labelling data and comparing classification algorithms
-
-"""
+"""Labelling data and comparing classification algorithms"""
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -9,9 +7,7 @@ from sklearn import model_selection, preprocessing
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import (accuracy_score, classification_report,
-                             confusion_matrix)
-from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
@@ -234,7 +230,7 @@ for x in list1:
         )
         results.append(cv_results)
         names.append(name)
-        msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+        msg = "{}: {:f} ({:f})".format(name, cv_results.mean(), cv_results.std())
         print(msg)
 
     # compare algorithms

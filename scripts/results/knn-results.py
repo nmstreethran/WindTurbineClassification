@@ -1,6 +1,4 @@
-"""kNN classifier results
-
-"""
+"""kNN classifier results"""
 
 import numpy as np
 import pandas as pd
@@ -194,6 +192,8 @@ for x in list1:  # filter only data for turbine x
                 Xt, Yt = X_train, Y_train
             knn1 = knn.fit(Xt, Yt)  # fit to classifier and predict
             Yp = knn1.predict(X_test)
-            print("Classification report for turbine %s, turbine category %s" % (x, n))
+            print(
+                "Classification report for turbine {}, turbine category {}".format(x, n)
+            )
             print(classification_report(Y_test, Yp, digits=6))
         print("------------------------------------------------------------")

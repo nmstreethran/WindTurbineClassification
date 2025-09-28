@@ -1,6 +1,4 @@
-"""Decision tree classifier results
-
-"""
+"""Decision tree classifier results"""
 
 import itertools
 import subprocess
@@ -8,9 +6,7 @@ import subprocess
 import numpy as np
 import pandas as pd
 from sklearn import model_selection, preprocessing
-from sklearn.metrics import (accuracy_score, classification_report,
-                             confusion_matrix)
-from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
 
 # import data
