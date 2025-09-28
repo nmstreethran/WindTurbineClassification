@@ -8,6 +8,13 @@ WindTurbineClassification
 
 Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms
 
+- GitHub: https://github.com/nmstreethran/WindTurbineClassification
+- Zenodo: https://doi.org/10.5281/zenodo.2875795
+
+This work is derived from `Nithiya Streethran <https://github.com/nmstreethran>`_'s dissertation for the degree of Master of Science (MSc) in Renewable Energy Engineering at Heriot-Watt University, which was completed during a technical placement at Natural Power between May and August 2017.
+
+.. important::
+   Unfortunately, the datasets are proprietary industry data and I do not own the rights to distribute them to the public. Please do not contact me to request the datasets.
 
 .. toctree::
    :maxdepth: 2
