@@ -3,9 +3,6 @@
 [![DOI](https://img.shields.io/badge/10.5281%2Fzenodo.2875795%20-%20?style=for-the-badge&logo=doi&logoColor=white&labelColor=blue&color=grey&link=https://doi.org/10.5281/zenodo.2875795)](https://doi.org/10.5281/zenodo.2875795)
 [![Docs](https://img.shields.io/badge/docs%20-%20?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=grey&link=https://nmstreethran.github.io/WindTurbineClassification)](https://nmstreethran.github.io/WindTurbineClassification)
 
-
-<!-- https://img.shields.io/static/v1?label=&message=script&style=for-the-badge&logo=python&labelColor=snow&color=grey -->
-
 ***Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms***
 
 by Nithiya Streethran (<nmstreethran@gmail.com>)

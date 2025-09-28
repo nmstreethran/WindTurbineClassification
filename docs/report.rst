@@ -1,6 +1,15 @@
 Report
 ======
 
+**Specification of 'normal' wind turbine operating behaviour for rapid anomaly detection: through the use of machine learning algorithms**
+
+by Nithiya Streethran
+
+- GitHub: https://github.com/nmstreethran/WindTurbineClassification
+- Docs: https://nmstreethran.github.io/WindTurbineClassification
+- Zenodo: https://doi.org/10.5281/zenodo.2875795
+- PDF: https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf
+
 Abstract
 --------
 
@@ -1285,115 +1294,3 @@ References
    `6.4. Introduction to Time Series
    Analysis <https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc4.htm>`__.
    (n.d.).
-
-.. [37]
-   `3.1. Cross-validation: Evaluating estimator performance -
-   Scikit-learn 0.18.2
-   documentation <https://scikit-learn.org/0.18/modules/cross_validation.html>`__.
-   (n.d.).
-
-.. [38]
-   Puget, J. F. (2016, July 5). Overfitting In Machine Learning - IT
-   Best Kept Secret Is Optimization - CT904.
-
-.. [39]
-   Liang, Y. (2016). `Machine Learning Basics - Lecture 6:
-   Overfitting <https://www.cs.princeton.edu/courses/archive/spring16/cos495/slides/ML_basics_lecture6_overfitting.pdf>`__.
-
-.. [40]
-   `Normalize Data - ML Studio (classic) -
-   Azure <https://docs.microsoft.com/en-us/azure/machine-learning/studio-module-reference/normalize-data>`__.
-   (2017, June 2).
-
-.. [41]
-   `4.3. Preprocessing data - Scikit-learn 0.19.0
-   documentation <https://scikit-learn.org/0.19/modules/preprocessing.html>`__.
-   (n.d.).
-
-.. [42]
-   `3.3. Model evaluation: Quantifying the quality of
-   predictions-Scikit-learn 0.19.2
-   documentation <https://scikit-learn.org/0.19/modules/model_evaluation.html>`__.
-   (n.d.).
-
-.. [43]
-   de Ruiter, A. (2015, February 9). Performance measures in Azure ML:
-   Accuracy, Precision, Recall and F1 Score.
-
-.. [44]
-   `Performance Measures for Machine
-   Learning <https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf>`__.
-   (n.d.).
-
-.. [45]
-   `Performance Measures for Machine
-   Learning <https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf>`__.
-   (n.d.).
-
-.. [46]
-   SAS Help Center: Precision, Recall, and the F1 Score.
-
-.. [47]
-   `Performance Measures for Machine
-   Learning <https://www.cs.cornell.edu/courses/cs578/2003fa/performance_measures.pdf>`__.
-   (n.d.).
-
-.. [48]
-   `3.3. Model evaluation: Quantifying the quality of
-   predictions-Scikit-learn 0.19.2
-   documentation <https://scikit-learn.org/0.19/modules/model_evaluation.html>`__.
-   (n.d.).
-
-.. [49]
-   Rudy, J. (2013). `Plotting feature importance - Py-earth 0.1.0
-   documentation <https://contrib.scikit-learn.org/py-earth/auto_examples/plot_feature_importance.html>`__.
-
-.. [50]
-   Gutierrez-Osuna, R. (n.d.). L8: Nearest neighbors - CSCE 666 Pattern
-   Analysis. CSE@TAMU.
-
-.. [51]
-   `1.6. Nearest Neighbors - Scikit-learn 0.19.0
-   documentation <https://scikit-learn.org/0.19/modules/neighbors.html>`__.
-   (n.d.).
-
-.. [52]
-   Gutierrez-Osuna, R. (n.d.). L8: Nearest neighbors - CSCE 666 Pattern
-   Analysis. CSE@TAMU.
-
-.. [53]
-   Maitra, R. (n.d.). Distribution-free Predictive Approaches.
-
-.. [54]
-   `1.10. Decision Trees - Scikit-learn 0.18.2
-   documentation <https://scikit-learn.org/0.18/modules/tree.html>`__.
-   (n.d.).
-
-.. [55]
-   Reactive power - npower Business. (n.d.).
-
-.. [56]
-   Overbye, T. & Baldick, R. (n.d.). `EE369 POWER SYSTEM ANALYSIS -
-   Lecture 18: Fault
-   Analysis <https://users.ece.utexas.edu/~baldick/classes/369/Lecture_18.ppt>`__.
-
-.. [57]
-   Overbye, T. & Baldick, R. (n.d.). `EE369 POWER SYSTEM ANALYSIS -
-   Lecture 18: Fault
-   Analysis <https://users.ece.utexas.edu/~baldick/classes/369/Lecture_18.ppt>`__.
-
-.. [58]
-   `Statistics Show Bearing Problems Cause the Majority of Wind Turbine
-   Gearbox
-   Failures <https://www.energy.gov/eere/wind/articles/statistics-show-bearing-problems-cause-majority-wind-turbine-gearbox-failures>`__.
-   (2015, September 17). Energy.gov.
-
-.. [59]
-   Sheng, S., McDade, M. & Errichello, R. (2011, October). `Wind Turbine
-   Gearbox Failure Modes - A
-   Brief <https://www.nrel.gov/docs/fy12osti/53084.pdf>`__. ASME/STLE
-   2011 International Joint Tribology Conference, Los Angeles, CA, USA.
-
-.. [60]
-   de Ruiter, A. (2015, February 9). Performance measures in Azure ML:
-   Accuracy, Precision, Recall and F1 Score.
