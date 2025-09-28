@@ -1,4 +1,4 @@
-name: wind-turbine-classification
+name: WindTurbineClassification
 channels:
   - conda-forge
   - defaults
@@ -9,6 +9,11 @@ dependencies:
   - pandas
   - jupyterlab
   - openpyxl
-  - black
+  - nbqa
+  - ruff
+  - pyupgrade
+  - black-jupyter
   - pylint
   - flake8
+  - myst-nb
+  - pydata-sphinx-theme
