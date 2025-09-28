@@ -223,13 +223,15 @@ taking into account the nacelle position. Using only ``ws_av`` and
 ``wd_av`` for wind speed and wind direction, the number of features that
 are available for machine learning is 10.
 
-{% include table-caption caption=“**Table 1:** Summary of SCADA fields
-for the SCADA data used in this project. The fields include timestamps
-with a resolution of 10 minutes, average active power, wind speed, pitch
-and runtime. The fields that contain measurements averaged over the
-10-minute period are highlighted in green. These measurements can be
-used as features in machine learning as they are turbine properties.” %}
-{% include gallery id=“gt1” %}
+.. figure:: report/images/t1.png
+   :alt: Summary of SCADA fields
+
+   **Table 1:** Summary of SCADA fields
+   for the SCADA data used in this project. The fields include timestamps
+   with a resolution of 10 minutes, average active power, wind speed, pitch
+   and runtime. The fields that contain measurements averaged over the
+   10-minute period are highlighted in green. These measurements can be
+   used as features in machine learning as they are turbine properties.
 
 The downtime data consists of fields summarised in Table 2. Each row of
 downtime data consists of the start and end timestamps of the downtime
@@ -243,10 +245,13 @@ stands for. All quantities in the downtime data, except the alarms, are
 supervised (i.e. the data recordings are input and monitored by
 maintenance professionals).
 
-{% include table-caption caption=“**Table 2:** Summary of fields for the
-downtime data used in this project. The fields include start and end
-timestamps for the downtime event, downtime categories, workorders and
-alarms.” %} {% include gallery id=“gt2” %}
+.. figure:: report/images/t2.png
+   :alt: Summary of fields for the downtime data
+
+   **Table 2:** Summary of fields for the
+   downtime data used in this project. The fields include start and end
+   timestamps for the downtime event, downtime categories, workorders and
+   alarms.
 
 Each row of SCADA data requires a class which describes the state of the
 turbine. The chosen classes are ‘normal’ for normal behaviour, and
@@ -267,10 +272,13 @@ separate labels, or columns, are added for each specific fault, which
 will allow for the different faults to be distinguished. The rows with a
 fault category are classed as ‘faulty’ in the corresponding column.
 
-{% include table-caption caption=“**Table 3:** List of turbine
-categories in the wind farm downtime data. The categories used as the
-different faults for labelling are highlighted in green. The others do
-not indicate a fault.” %} {% include gallery id=“gt3” %}
+.. figure:: report/images/t3.png
+   :alt: List of turbine categories in the wind farm downtime data
+
+   **Table 3:** List of turbine
+   categories in the wind farm downtime data. The categories used as the
+   different faults for labelling are highlighted in green. The others do
+   not indicate a fault.
 
 To summarise the machine learning terminology used, features refer to
 SCADA fields which are turbine properties, labels refer to turbine
@@ -329,22 +337,35 @@ based on the minimum power before cut-in that does not distort the power
 curve shape for all 25 turbines. The result of applying these filters is
 shown in Figure 1c.
 
-{% include gallery id=“gf1” caption=“**Figure 1:** Changes to the power
-curve of turbine 2 with the fault points corresponding to when the
-turbine category is 16 (‘tower’) through the two stages of filtering out
-anomalous and curtailment points labelled as ‘normal’. The original
-power curve, with all data points, is shown in **Figure 1a**. The first
-stage involves a filter based on a pitch angle threshold, which produces
-**Figure 1b**, displaying ‘normal’ data points with pitch angles between
-0 ° and 3.5 ° and between 10 % power and 90 % power (i.e. without
-curtailment). The second stage involves several additional filters
-applied to ‘normal’ data points to produce the final power curve
-**Figure 1c**. These filters are either power > 100 kW before cut-in (3
-m/s), or one of the following at operating wind speeds (3 m/s to 25
-m/s): (i) power ≤ 0 kW, (ii) runtime < 600 s, (iii) availability
-categories ≠ available / non-penalising, (iv) environmental, grid or
-infrastructure categories ≠ OK, (v) turbine categories not highlighted
-in Table 3, or ≠ OK.” %}
+.. figure:: report/images/f1a.png
+   :alt: Power curve of turbine 2
+
+   **Figure 1:** Changes to the power
+   curve of turbine 2 with the fault points corresponding to when the
+   turbine category is 16 (‘tower’) through the two stages of filtering out
+   anomalous and curtailment points labelled as ‘normal’. The original
+   power curve, with all data points, is shown in **Figure 1a**.
+
+.. figure:: report/images/f1b.png
+   :alt: Power curve of turbine 2
+
+   The first
+   stage involves a filter based on a pitch angle threshold, which produces
+   **Figure 1b**, displaying ‘normal’ data points with pitch angles between
+   0 ° and 3.5 ° and between 10 % power and 90 % power (i.e. without
+   curtailment).
+
+.. figure:: report/images/f1c.png
+   :alt: Power curve of turbine 2
+
+   The second stage involves several additional filters
+   applied to ‘normal’ data points to produce the final power curve
+   **Figure 1c**. These filters are either power > 100 kW before cut-in (3
+   m/s), or one of the following at operating wind speeds (3 m/s to 25
+   m/s): (i) power ≤ 0 kW, (ii) runtime < 600 s, (iii) availability
+   categories ≠ available / non-penalising, (iv) environmental, grid or
+   infrastructure categories ≠ OK, (v) turbine categories not highlighted
+   in Table 3, or ≠ OK.
 
 Rows of data with missing features and labels are removed, as all fields
 must be complete for classification. Instead of deleting the rows of
@@ -420,10 +441,13 @@ training data from overfitting to the classifier, which happens when the
 classifier performs well during training but poorly on testing or unseen
 future data [22]_  [23]_.
 
-{% include gallery id=“gf2” caption=“**Figure 2:** Illustration of
-traditional cross-validation and time series split cross-validation,
-both five-folds. In time series split, shown on the right, the order of
-data is taken into account.” %}
+.. figure:: report/images/f2.png
+   :alt: Cross-validation illustration
+
+   **Figure 2:** Illustration of
+   traditional cross-validation and time series split cross-validation,
+   both five-folds. In time series split, shown on the right, the order of
+   data is taken into account.
 
 Prior to cross-validation, the features are normalised [24]_ to a scale
 of 0 to 1. This is important as the features used in classification have
@@ -519,19 +543,24 @@ using the imbalanced data without *k* optimisation, but compared to the
 F1 scores of DT and RF using imbalanced data, this is still lower by 5.1
 % and 6.1 % respectively.
 
-{% include table-caption caption=“**Table 4:** Overall precision, recall
-and F1 scores for optimising hyperparameters for decision trees and
-random forests, and k nearest neighbours. The mean and standard
-deviation are obtained by averaging all scores output by all turbines
-for the optimal hyperparameter. The values are colour-coded to show
-better performances (i.e. higher mean and lower standard deviation) in
-darker shades and worse performances in lighter shades.” %} {% include
-gallery id=“gt4” %}
+.. figure:: report/images/t4.png
+   :alt: Overall precision, recall and F1 scores
 
-{% include gallery id=“gf3” caption=“**Figure 3:** Number of neighbours,
-or *k* value for each turbine optimised based on the average F1 score
-through five-fold cross-validation. The optimal *k* is 13 or less for 17
-turbines, and more than 100 for 5 turbines.” %}
+   **Table 4:** Overall precision, recall
+   and F1 scores for optimising hyperparameters for decision trees and
+   random forests, and k nearest neighbours. The mean and standard
+   deviation are obtained by averaging all scores output by all turbines
+   for the optimal hyperparameter. The values are colour-coded to show
+   better performances (i.e. higher mean and lower standard deviation) in
+   darker shades and worse performances in lighter shades.
+
+.. figure:: report/images/f3.png
+   :alt: k value for each turbine
+
+   **Figure 3:** Number of neighbours,
+   or *k* value for each turbine optimised based on the average F1 score
+   through five-fold cross-validation. The optimal *k* is 13 or less for 17
+   turbines, and more than 100 for 5 turbines.
 
 The time taken to execute the Python code using the optimal
 hyperparameters to produce the results for all 25 turbines, which
@@ -553,12 +582,15 @@ classifier with the best performance, which is RF. The other
 classifiers, however, can be tested more efficiently if better computing
 resources are available.
 
-{% include table-caption caption=“**Table 5:** Time taken to run each
-classifier using imbalanced and balanced datasets for the 30-month
-period. These timings are approximate as the RAM was not utilised fully
-by the Python application due to other processes running in the
-background, and the application had to be restarted a number of time due
-to system crashes.” %} {% include gallery id=“gt5” %}
+.. figure:: report/images/t5.png
+   :alt: Time taken to run each classifier
+
+   **Table 5:** Time taken to run each
+   classifier using imbalanced and balanced datasets for the 30-month
+   period. These timings are approximate as the RAM was not utilised fully
+   by the Python application due to other processes running in the
+   background, and the application had to be restarted a number of time due
+   to system crashes.
 
 Performance of each turbine and label
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -590,10 +622,13 @@ and ‘electrical system’ are the two categories causing the most downtime
 events and are in the top three in terms of the downtime period. These
 two labels also had the worst performance scores.
 
-{% include gallery id=“gf4” caption=“**Figure 4:** Bar chart showing the
-various turbine categories quantified by the downtime frequency per
-turbine per year on the left, and downtime period, in hours, per turbine
-per year on the right. This was plot using the downtime data.” %}
+.. figure:: report/images/f4.png
+   :alt: Turbine categories
+
+   **Figure 4:** Bar chart showing the
+   various turbine categories quantified by the downtime frequency per
+   turbine per year on the left, and downtime period, in hours, per turbine
+   per year on the right. This was plot using the downtime data.
 
 Performance of each class
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -659,12 +694,14 @@ turbine category 10 regardless of balancing, and for turbine category 5
 using imbalanced data. In the case of balanced data for turbine category
 5, the third most important feature was the pitch angle.
 
-{% include table-caption caption=“**Table 6:** Feature importance for
-turbine categories 10 and 5 using random forests and either imbalanced
-(I) or balanced (B) training data. The values are normalised and
-colour-coded, transitioning from red (lower importance) to yellow
-(intermediate) to green (higher importance).” %} {% include gallery
-id=“gt6” %}
+.. figure:: report/images/t6.png
+   :alt: Feature importance
+
+   **Table 6:** Feature importance for
+   turbine categories 10 and 5 using random forests and either imbalanced
+   (I) or balanced (B) training data. The values are normalised and
+   colour-coded, transitioning from red (lower importance) to yellow
+   (intermediate) to green (higher importance).
 
 Discussion
 ----------
@@ -716,13 +753,26 @@ are also many overlapping ‘normal’, ‘faulty’ and ‘*X* hours before
 fault’ points even after filtration of curtailment and anomalies, which
 could explain why this feature was less important.
 
-{% include gallery id=“gf5” caption=“**Figure 5**: Labelled power curve
-for turbine 1 with turbine category 10 (‘electrical system’) through the
-two stages of filtering out anomalous and curtailment points labelled as
-‘normal’. The original power curve is shown in **Figure 5a**. The first
-stage involves a filter based on a pitch angle threshold, which produces
-**Figure 5b**. The second stage involves several additional filters to
-produce the final power curve **Figure 5c**.” %}
+.. figure:: report/images/f5a.png
+   :alt: Labelled power curve for turbine 1 with turbine category 10
+
+   **Figure 5**: Labelled power curve
+   for turbine 1 with turbine category 10 (‘electrical system’) through the
+   two stages of filtering out anomalous and curtailment points labelled as
+   ‘normal’. The original power curve is shown in **Figure 5a**.
+
+.. figure:: report/images/f5b.png
+   :alt: Labelled power curve for turbine 1 with turbine category 10
+
+   The first
+   stage involves a filter based on a pitch angle threshold, which produces
+   **Figure 5b**.
+
+.. figure:: report/images/f5c.png
+   :alt: Labelled power curve for turbine 1 with turbine category 10
+
+   The second stage involves several additional filters to
+   produce the final power curve **Figure 5c**.
 
 The reactive power and generator speed played a bigger role in the
 classification for ‘electrical system’, which makes sense considering
@@ -966,8 +1016,8 @@ any label are not dropped) (**Table A5a**), and without the
 transitions from red (lower scores) to yellow (intermediate) to green
 (higher scores).” %} {% include gallery id=“gta5” %}
 
-Footnotes
----------
+References
+----------
 
 .. [1]
    Kim, K., Parthasarathy, G., Uluyol, O., Foslien, W., Sheng, S. &
