@@ -461,17 +461,17 @@ done [25]_.
 
 A number of performance metrics are available on scikit-learn to assess
 classifier performance [26]_. Precision is the ratio of true positives,
-\\(tp\) to the sum of \\(tp\) and false positives, \\(fp\), as shown in
-Equation 1. Equation 2 describes recall, which is the ratio of \\(tp\)
-to the sum of \\(tp\) and false negatives, \\(fn\) [27]_. The F1 score,
+:math:`tp` to the sum of :math:`tp` and false positives, :math:`fp`, as shown in
+Equation 1. Equation 2 describes recall, which is the ratio of :math:`tp`
+to the sum of :math:`tp` and false negatives, :math:`fn` [27]_. The F1 score,
 shown in Equation 3, is the harmonic average of precision and
 recall [28]_. The reason for not using accuracy is because it does not
-distinguish between \\(tp\) and true negatives, \\(tn\) [28]_  [29]_.
+distinguish between :math:`tp` and true negatives, :math:`tn` [28]_  [29]_.
 The metrics compute the scores for each class individually which are
 averaged, taking into account the support, which is the number of data
 points belonging to each class in the test set, to produce the final
 weighted score. The higher the scores, the better the performance of the
-classifier. \\(fp\) and \\(fn\) both have costs [28]_. However, it is
+classifier. :math:`fp` and :math:`fn` both have costs [28]_. However, it is
 unknown at the moment which is more important for this wind farm.
 Therefore, the optimisations will use the F1 score as the main
 performance metric. As these metrics are not supported for multilabel
