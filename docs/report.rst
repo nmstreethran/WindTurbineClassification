@@ -52,53 +52,53 @@ which refers to the cost to run them relative to the electricity
 generation, or revenue [1]_  [2]_. Increasing this effectiveness lowers
 the payback period of new wind turbines or farms, thus making wind a
 more economic clean energy source, attracting governments and private
-organisations to make more investments in wind projects [3]_. It can,
+organisations to make more investments in wind projects [1]_. It can,
 however, be decreased due to major component failure, frequent downtime,
 turbine degradation and age, which in turn increase the operation and
 maintenance cost and decrease the energy generation efficiency of wind
-turbines [4]_  [5]_. There are difficulties and high costs involved in
+turbines [1]_  [3]_. There are difficulties and high costs involved in
 carrying out maintenance on wind turbines, especially for ones that
 operate in extreme and remote conditions, such as offshore wind farms,
-where the turbines tend to also exist in larger numbers [6]_  [7]_.
+where the turbines tend to also exist in larger numbers [3]_  [4]_.
 
 Condition-based monitoring systems that continuously monitor wind
 turbine states increase this effectiveness by significantly reducing the
 maintenance costs, reportedly by 20 % to 25 %, as it prevents
-unscheduled maintenance [8]_. According to the Electric Power Research
+unscheduled maintenance [2]_. According to the Electric Power Research
 Institute, reactive maintenance, which refers to running the turbine
 until it reaches failure, has the highest cost, followed by preventive
-or scheduled maintenance, which is reported to cost 24 % less [9]_.
+or scheduled maintenance, which is reported to cost 24 % less [5]_.
 Meanwhile, condition-based or predictive maintenance, which prevents
-catastrophic failure, [10]_ is reported to save 47 % of the cost of
-reactive maintenance, [11]_ which makes it the most cost-effective and
+catastrophic failure, [1]_ is reported to save 47 % of the cost of
+reactive maintenance, [5]_ which makes it the most cost-effective and
 preferred approach. Condition-based monitoring technologies include
 sensor-based oil and vibration analysis, which are useful for checking
 the oil for properties such as temperature, and rotating equipment
-respectively [12]_. These technologies, however, tend to put emphasis on
-the more expensive parts of a wind turbine such as the gearbox [13]_ due
-to the high costs involved in the installation of these sensors [14]_
- [15]_. These systems, which can be purchased from the turbine
+respectively [6]_. These technologies, however, tend to put emphasis on
+the more expensive parts of a wind turbine such as the gearbox [7]_ due
+to the high costs involved in the installation of these sensors [2]_  [6]_.
+These systems, which can be purchased from the turbine
 manufacturer, are usually pre-installed in offshore wind turbines due to
 the harsh environments in which they operate. However, they can be
-expensive [16]_ and uneconomical, especially for older wind turbines in
+expensive [4]_ and uneconomical, especially for older wind turbines in
 onshore wind farms, whose outputs are often less than that of an
 offshore wind farm.
 
 An alternative would be to use SCADA-based analysis, where the only cost
 involved would be computational and expensive sensors are not
-required [17]_  [18]_. A SCADA system, which stands for supervisory
+required [2]_  [4]_. A SCADA system, which stands for supervisory
 control and data acquisition, found pre-installed in most utility-scale
 wind turbines, collects data using numerous sensors at the controllers
-with usually 10-minute resolution [19]_  [20]_, of various parameters of
+with usually 10-minute resolution [4]_  [8]_, of various parameters of
 the wind turbine, such as wind speed, active power, bearing temperature
-and voltage [21]_. Power curve analysis can be done using this data, but
-this analysis only detects wind turbine underperformance [22]_.
+and voltage [2]_. Power curve analysis can be done using this data, but
+this analysis only detects wind turbine underperformance [9]_.
 Meanwhile, implementing machine learning algorithms on SCADA signals to
 classify them as having either normal or anomalous behaviour, has the
 ability to predict faults in advance. This has been demonstrated in a
 number of publications.
 
-Kusiak and Li [23]_ investigated predicting a specific fault, which is
+Kusiak and Li [10]_ investigated predicting a specific fault, which is
 diverter malfunction. 3 months’ worth of SCADA data of four wind
 turbines were used and the corresponding status and fault codes were
 integrated into this data to be labelled to differentiate between normal
@@ -116,7 +116,7 @@ fault was the focus of this methodology and in reality, wind turbines
 could have many faults in different components and structures, which may
 all have some form of correlation between one other.
 
-Godwin and Matthews [24]_ focussed on wind turbine pitch control faults
+Godwin and Matthews [7]_ focussed on wind turbine pitch control faults
 using a classifier called the RIPPER algorithm. They used 28 months’
 worth of SCADA data containing wind speeds, pitch motor torques and
 pitch angles, of eight wind turbines known to have had pitch problems in
@@ -136,10 +136,10 @@ the results in more depth, it was found that the classifier had F1
 scores, which is an accuracy measure that accounts for true and false
 positives and negatives, of 79 %, 100 % and 78 % in classifying normal,
 potential fault and recognised fault data respectively. Although the
-results are an improvement to Kusiak and Li [25]_, this methodology
+results are an improvement to Kusiak and Li [10]_, this methodology
 similarly focussed on only one fault.
 
-Leahy et al. [26]_ used a specific fault prediction approach,
+Leahy et al. [2]_ used a specific fault prediction approach,
 implementing a support vector machine classifier from scikit-learn’s
 LibSVM. They used SCADA data from a single 3 MW wind turbine spanning 11
 months with status and warning codes. The labelling was done such that
@@ -188,27 +188,16 @@ algorithms to find the most suitable classifier, identifying limitations
 and suggesting improvements to the method and how it can be adapted for
 use in industry.
 
-Outline
-~~~~~~~
-
-Chapter 2 will describe in detail the tools and datasets used, how the
-data was processed and labelled and the classification methods and
-performance metrics used. In Chapter 3, a detailed description of the
-results obtained is presented, followed by a discussion of these results
-and limitations of this methodology in Chapter 4. In Chapter 5,
-conclusions are drawn and possible areas for future work are
-recommended.
-
 Methodology
 -----------
 
 Tools and datasets
 ~~~~~~~~~~~~~~~~~~
 
-This project requires a computer with Python Programming Language [27]_
+This project requires a computer with Python Programming Language [11]_
 and essential libraries installed for data processing. The computer used
 has a dual core processor with 2.8 GHz maximum clock speed and 4 GB RAM.
-Additionally, the open-source scikit-learn library [28]_ is used for
+Additionally, the open-source scikit-learn library [12]_ is used for
 machine learning. The datasets used are that of a wind farm comprised of
 25 turbines with a rated power of 2,500 kW covering a period of 30
 months starting 1st November 2014, downloaded from Natural Power’s
@@ -251,7 +240,7 @@ the maintenance work was undertaken. Each condition within each downtime
 category is represented by a unique identifier in the dataset. A
 separate spreadsheet accompanying the dataset list what each identifier
 stands for. All quantities in the downtime data, except the alarms, are
-supervised (i.e. the data recordings are input and monitored by
+supervised (i.e. the data recordings are input and monitored by
 maintenance professionals).
 
 {% include table-caption caption=“**Table 2:** Summary of fields for the
@@ -286,7 +275,7 @@ not indicate a fault.” %} {% include gallery id=“gt3” %}
 To summarise the machine learning terminology used, features refer to
 SCADA fields which are turbine properties, labels refer to turbine
 categories or type of fault, and classes refer to the state of the
-turbine (e.g. ‘normal’ or ‘faulty’) for each row of data at each label.
+turbine (e.g. ‘normal’ or ‘faulty’) for each row of data at each label.
 The features and labels will be fit to a classifier for training as
 arrays *X* of size ``[rows, 10]`` and Y of size ``[rows, 14]``
 respectively, where rows refer to the number of rows in the training
@@ -294,7 +283,7 @@ data.
 
 To predict faults for each label, rows with timestamps up to 48 hours in
 advance of a ‘faulty’ row are classed at 6-hour intervals (i.e. up to
-*X* hours before a fault, where *X* = 6, 12, …, 48). The reasons for
+*X* hours before a fault, where *X* = 6, 12, ..., 48). The reasons for
 having classes of 6-hour intervals for fault detection rather than a
 single class is to allow action to be taken appropriate to the time
 before fault. For example, if it is predicted that the wind turbine
@@ -302,7 +291,7 @@ could have a fault in six hours or less, it could be switched off to
 prevent further damage from occurring. 48 hours is enough time for
 maintenance professionals to travel to site and carry out inspection,
 and decide on what action to take. Depending on the nature of the site,
-this value can be modified (i.e. for an offshore wind farm which
+this value can be modified (i.e. for an offshore wind farm which
 operates in harsh environments, it is more likely to take a longer time
 to travel to the site and complete works relative to an onshore wind
 farm).
@@ -347,7 +336,7 @@ anomalous and curtailment points labelled as ‘normal’. The original
 power curve, with all data points, is shown in **Figure 1a**. The first
 stage involves a filter based on a pitch angle threshold, which produces
 **Figure 1b**, displaying ‘normal’ data points with pitch angles between
-0 ° and 3.5 ° and between 10 % power and 90 % power (i.e. without
+0 ° and 3.5 ° and between 10 % power and 90 % power (i.e. without
 curtailment). The second stage involves several additional filters
 applied to ‘normal’ data points to produce the final power curve
 **Figure 1c**. These filters are either power > 100 kW before cut-in (3
@@ -377,33 +366,33 @@ classification into multiple classes, which makes this a
 multiclass-multilabel problem. There are presently three classification
 algorithms on scikit-learn with the ability to classify
 multiclass-multilabel problems, namely decision trees (DT), random
-forests (RF) and k nearest neighbours (kNN) [29]_. Therefore, only these
+forests (RF) and k nearest neighbours (kNN) [13]_. Therefore, only these
 three classifiers are evaluated in this project.
 
 DT is a simple technique which uses a tree structure to ask a series of
-questions with conditions to split data with different attributes [30]_.
+questions with conditions to split data with different attributes [14]_.
 While DT only uses a single tree, RF constructs multiple trees which
 perform the classification to determine the class, with the majority
 class among all trees being selected, therefore producing a classifier
-better than DT [31]_. Meanwhile, for kNN, the class of a test sample is
+better than DT [15]_. Meanwhile, for kNN, the class of a test sample is
 determined by comparing the sample to a number of closest neighbouring
-training samples [32]_  [33]_. Each classifier consists of
+training samples [16]_  [17]_. Each classifier consists of
 hyperparameters which can be optimised for specific data for better
 performance. An example is the number of neighbours, or *k*, for kNN,
 which is a user-defined positive integer.
 
-The data used in this project is highly imbalanced (i.e. the number of
+The data used in this project is highly imbalanced (i.e. the number of
 samples for ‘normal’ class is in thousands for each turbine, while the
 ‘faulty’ and ‘*X* hours before fault’ classes only range from tens to a
 few hundreds). This can cause the classifier to be biased towards the
-majority class and perform poorly on minority classes [34]_. The effect
+majority class and perform poorly on minority classes [18]_. The effect
 of balancing data is investigated by doing classification with and
 without class balancing. The balancing is done by oversampling all
-classes using the imbalanced-learn library’s random over sampler [35]_
+classes using the imbalanced-learn library’s random over sampler [19]_
 prior to feeding the training data into the classifiers. Oversampling is
 done instead of random sampling, because it will not reduce the amount
 of data, which causes loss of information. This oversampling does not
-support multilabel classification (i.e. it only accepts array *Y* of
+support multilabel classification (i.e. it only accepts array *Y* of
 size ``[rows, 1]``), therefore separate estimators will be used for each
 fault. This means that for each turbine, using the imbalanced multilabel
 approach would only require one estimator which trains on all labels
@@ -420,23 +409,23 @@ and testing set combinations would be different. The performance is
 measured for each fold and averaged to give the final score. Since SCADA
 data is a time series, it is likely that the data points collected over
 time have some form of correlation, which must be considered when being
-analysed [36]_. Therefore, this makes the traditional cross-validation
+analysed [20]_. Therefore, this makes the traditional cross-validation
 unsuitable, as it does not take the order of the data into account. The
 data is divided using scikit-learn’s time series split, which includes
-the preceding set of data in successive splits [37]_. Figure 2
+the preceding set of data in successive splits [21]_. Figure 2
 illustrates the difference between traditional and time series split
 cross-validations. Optimising the hyperparameters of a classifier based
 on the average performance over cross-validation folds prevents the
 training data from overfitting to the classifier, which happens when the
 classifier performs well during training but poorly on testing or unseen
-future data [38]_  [39]_.
+future data [22]_  [23]_.
 
 {% include gallery id=“gf2” caption=“**Figure 2:** Illustration of
 traditional cross-validation and time series split cross-validation,
 both five-folds. In time series split, shown on the right, the order of
 data is taken into account.” %}
 
-Prior to cross-validation, the features are normalised [40]_ to a scale
+Prior to cross-validation, the features are normalised [24]_ to a scale
 of 0 to 1. This is important as the features used in classification have
 vastly different scales. For example, the turbine data sheet gives
 generator operating speeds of between 740 rpm and 1,300 rpm, while the
@@ -444,21 +433,21 @@ wind speeds recorded by the anemometers range from 0 m/s up to 34 m/s.
 Normalisation preserves the characteristics and distribution of the
 features and prevents potential problems that could arise due to
 features with drastically different scales when classification is
-done [41]_.
+done [25]_.
 
 A number of performance metrics are available on scikit-learn to assess
-classifier performance [42]_. Precision is the ratio of true positives,
+classifier performance [26]_. Precision is the ratio of true positives,
 \\(tp\) to the sum of \\(tp\) and false positives, \\(fp\), as shown in
 Equation 1. Equation 2 describes recall, which is the ratio of \\(tp\)
-to the sum of \\(tp\) and false negatives, \\(fn\) [43]_. The F1 score,
+to the sum of \\(tp\) and false negatives, \\(fn\) [27]_. The F1 score,
 shown in Equation 3, is the harmonic average of precision and
-recall [44]_. The reason for not using accuracy is because it does not
-distinguish between \\(tp\) and true negatives, \\(tn\) [45]_  [46]_.
+recall [28]_. The reason for not using accuracy is because it does not
+distinguish between \\(tp\) and true negatives, \\(tn\) [28]_  [29]_.
 The metrics compute the scores for each class individually which are
 averaged, taking into account the support, which is the number of data
 points belonging to each class in the test set, to produce the final
 weighted score. The higher the scores, the better the performance of the
-classifier. \\(fp\) and \\(fn\) both have costs [47]_. However, it is
+classifier. \\(fp\) and \\(fn\) both have costs [28]_. However, it is
 unknown at the moment which is more important for this wind farm.
 Therefore, the optimisations will use the F1 score as the main
 performance metric. As these metrics are not supported for multilabel
@@ -535,7 +524,7 @@ and F1 scores for optimising hyperparameters for decision trees and
 random forests, and k nearest neighbours. The mean and standard
 deviation are obtained by averaging all scores output by all turbines
 for the optimal hyperparameter. The values are colour-coded to show
-better performances (i.e. higher mean and lower standard deviation) in
+better performances (i.e. higher mean and lower standard deviation) in
 darker shades and worse performances in lighter shades.” %} {% include
 gallery id=“gt4” %}
 
@@ -613,7 +602,7 @@ Since turbine category 10 was found to have the worst performance, the
 performance of each class for this label is looked at in more detail,
 which is done by obtaining confusion matrices. A confusion matrix
 displays, for each class, the number of samples predicted correctly and
-what the wrongly predicted samples were classified as [48]_. This will
+what the wrongly predicted samples were classified as [26]_. This will
 allow the decision to be made whether the number of classes and
 intervals used for fault prediction can be tweaked for better classifier
 performance. The matrices were first obtained for all turbines with only
@@ -658,7 +647,7 @@ Feature importance
 ~~~~~~~~~~~~~~~~~~
 
 The importance of each feature used, which are a set of normalised
-scores [49]_, were also obtained similar to the confusion matrix. The
+scores [30]_, were also obtained similar to the confusion matrix. The
 higher the feature importance, the more influence the feature had in
 determining the class of the samples. The feature importance for turbine
 categories 10 and 5 are shown in Table 6. For both turbine categories,
@@ -682,11 +671,11 @@ Discussion
 
 As mentioned earlier, kNN compares the test sample to *k* neighbouring
 training samples to determine the class. This means all training samples
-have to be stored in memory [50]_ which in turn could slow down the
+have to be stored in memory [31]_ which in turn could slow down the
 computer, causing the classifier to take a longer time to produce
-results. Being a non-parametric technique [51]_ unlike DT and RF, kNN is
-prone to the curse of dimensionality [52]_, which happens when the
-dimensions or number of features increases [53]_. This might explain the
+results. Being a non-parametric technique [17]_ unlike DT and RF, kNN is
+prone to the curse of dimensionality [31]_, which happens when the
+dimensions or number of features increases [32]_. This might explain the
 lower performance metric scores in comparison. There are big differences
 between the optimal *k* values for some turbines as shown in Figure 3,
 which could be due to the data for each turbine having different
@@ -695,7 +684,7 @@ distributions and characteristics.
 Overall, using a single multiclass-multilabel classifier with imbalanced
 training data produced better scores, which could be due to presence of
 correlations between the different turbine categories used as labels
-that are generalised better using this approach [54]_.
+that are generalised better using this approach [18]_.
 
 As the labels ‘gearbox’ and ‘electrical system’ are in the top three out
 of 14 labels used causing longest downtimes, they should have more
@@ -739,12 +728,12 @@ The reactive power and generator speed played a bigger role in the
 classification for ‘electrical system’, which makes sense considering
 the reactive power is produced as a result of impedance in the current
 due to electromagnetic fields produced by generators and
-transformers [55]_. It is likely that the features used in
+transformers [33]_. It is likely that the features used in
 classification for this label are unsuitable. A fault in the electrical
-system would be reflected in voltages, currents, frequencies [56]_ and
+system would be reflected in voltages, currents, frequencies [34]_ and
 temperature of power switchboards and cables. Electrical system faults
 could also be caused by environmental conditions such as lightning
-strikes and contact of wires with wildlife [57]_. If there are such
+strikes and contact of wires with wildlife [34]_. If there are such
 conditions recorded as environmental downtime categories, these should
 be accounted for when analysing faults in the electrical system.
 
@@ -753,8 +742,8 @@ despite having a higher mean F1 score than ‘electrical faults’, which
 could be due to feature selection as well. Statistics from the National
 Renewable Energy Laboratory’s gearbox failure database indicate that
 most faults are caused by bearings, gears and other components including
-filtration and lubrication systems [58]_. These are mostly due to wear,
-fatigue and cracks [59]_ and may be detected with higher accuracy if the
+filtration and lubrication systems [35]_. These are mostly due to wear,
+fatigue and cracks [36]_ and may be detected with higher accuracy if the
 features include quantities such as torque, oil pressure and gearbox
 temperature.
 
@@ -854,7 +843,7 @@ system, and the overall cost of running the wind farm or wind turbine.
 The analysis should give an indication on which performance metric is
 more important; if the cost of false negatives is more, attention should
 be paid to the recall score, while the precision is more important if
-false positives cost more [60]_.
+false positives cost more [27]_.
 
 Conclusion
 ----------
