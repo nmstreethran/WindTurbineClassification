@@ -1,0 +1,48 @@
+# https://www.sphinx-doc.org/en/master/tutorial/deploying.html
+# https://github.com/actions/deploy-pages
+# https://github.com/actions/upload-pages-artifact
+name: 'Sphinx: Render docs'
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'docs/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out Git repository
+      uses: actions/checkout@v4
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+        cache: 'pip'
+        cache-dependency-path: docs/requirements.txt
+    - name: Install setup dependencies
+      run: python -m pip install --upgrade pip setuptools wheel
+    - name: Install docs dependencies
+      run: python -m pip install -r docs/requirements.txt
+    - name: Make HTML
+      run: cd docs && make html
+    - name: Upload artifacts
+      uses: actions/upload-pages-artifact@v3
+      with:
+        name: github-pages
+        path: docs/_build/html/
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
