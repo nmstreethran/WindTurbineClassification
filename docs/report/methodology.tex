@@ -36,7 +36,7 @@ features that are available for machine learning is 10.
   measurements averaged over the 10-minute period are highlighted in green.
   These measurements can be used as features in machine learning as they are
   turbine properties.}
-  \includegraphics{../images/t1}
+  \includegraphics{images/t1}
 \end{table}
 
 The downtime data consists of fields summarised in \autoref{t2}. Each row of
@@ -55,7 +55,7 @@ recordings are input and monitored by maintenance professionals).
   \caption{\label{t2}Summary of fields for the downtime data used in this
   project. The fields include start and end timestamps for the downtime event,
   downtime categories, workorders and alarms.}
-  \includegraphics[width=\textwidth]{../images/t2}
+  \includegraphics[width=\textwidth]{images/t2}
 \end{table}
 
 Each row of SCADA data requires a class which describes the state of the
@@ -81,7 +81,7 @@ classed as `faulty' in the corresponding column.
   \caption{\label{t3}List of turbine categories in the wind farm downtime
   data. The categories used as the different faults for labelling are
   highlighted in green. The others do not indicate a fault.}
-  \includegraphics{../images/t3}
+  \includegraphics{images/t3}
 \end{table}
 
 To summarise the machine learning terminology used, features refer to SCADA
@@ -141,19 +141,19 @@ all 25 turbines. The result of applying these filters is shown in
   \centering
   \begin{subfigure}[t]{.5\textwidth}
     \centering
-    \includegraphics[height=5cm]{../images/f1a}
+    \includegraphics[height=5cm]{images/f1a}
     \caption{\label{f1a}All data points.}
   \end{subfigure}%
   \begin{subfigure}[t]{.5\textwidth}
     \centering
-    \includegraphics[height=5cm]{../images/f1b}
+    \includegraphics[height=5cm]{images/f1b}
     \caption{\label{f1b}Without curtailment (\textit{i.e.} pitch angle is between
     0\,\textdegree\ and 3.5\,\textdegree\ for `normal' data points between
     10\,\% power and 90\,\% power).}
   \end{subfigure}
   \begin{subfigure}[t]{.5\textwidth}
     \centering
-    \includegraphics[height=5cm]{../images/f1c}
+    \includegraphics[height=5cm]{images/f1c}
     \caption{\label{f1c}
       Additional filters (applied to `normal' data points): power \ensuremath{>} 100 kW
       before cut-in (3 m/s), and at operating wind speeds (3 m/s to 25 m/s):
@@ -244,7 +244,7 @@ unseen future data \cite{Puget16,Liang16}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=.8\textwidth]{../images/f2}
+  \includegraphics[width=.8\textwidth]{images/f2}
   \caption{\label{f2}Illustration of traditional cross-validation and time
   series split cross-validation, both five-folds. In time series split, shown
   on the right, the order of data is taken into account.}
