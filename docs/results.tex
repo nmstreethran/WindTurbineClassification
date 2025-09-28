@@ -90,7 +90,7 @@ values were also found. The turbine with the worst performance is turbine 1,
 with a mean and minimum F1 scores of 87\,\% and 44\,\%, respectively using
 imbalanced data, and 86\,\% and 41\,\%, respectively using balanced data, for
 turbine 1. Four other turbines had minimum scores less than 70\,\%, namely
-turbines 7, 9 ,15 and 16. Looking at the labels, turbine category 10, which is
+turbines 7, 9, 15 and 16. Looking at the labels, turbine category 10, which is
 `electrical system' had the worst performance, with mean and minimum F1 scores
 of 84\,\% and 44\,\%, respectively using imbalanced data, and 82\,\% and
 41\,\%, respectively using balanced data. These minimum scores correspond to
@@ -130,16 +130,16 @@ first obtained for all turbines with only this label using both imbalanced and
 balanced training data. Through five-fold cross-validation, a total of 125
 matrices were produced, which were then combined and normalised, which will
 produce the classification accuracy. The confusion matrices are shown in
-\autoref{a4}. 93-95\,\% of `normal' and 73-75\,\% of `curtailment' samples
-were classed correctly. In comparison, only 21-24\,\% of `faulty' samples were
-classified correctly, with 47-48\,\% misclassified as `curtailment' and
-21-26\,\% misclassified as `normal'.
+\autoref{a4}. 93--95\,\% of `normal' and 73--75\,\% of `curtailment' samples
+were classed correctly. In comparison, only 21--24\,\% of `faulty' samples were
+classified correctly, with 47--48\,\% misclassified as `curtailment' and
+21--26\,\% misclassified as `normal'.
 
 Due to this misclassification percentage being higher than the accuracy of the
 `faulty' class, the classification was repeated by dropping all rows with
 `curtailment', effectively removing the class. There is a significant
-improvement in the accuracy of `faulty' samples, from 21-24\,\% to 41-44\,\%.
-However, the majority of samples belonging to this class (44-49\,\%) were
+improvement in the accuracy of `faulty' samples, from 21--24\,\% to 41--44\,\%.
+However, the majority of samples belonging to this class (44--49\,\%) were
 still misclassified as `normal'. In fact, this is the case for the `X hours
 before fault' classes, with or without the use of the `curtailment' class. As
 X increases, the accuracy is seen to decrease, and the percentage of
@@ -149,15 +149,15 @@ To make a comparison, the same analysis was repeated for turbine category 5,
 which is `gearbox'. This category was chosen as its mean F1 score was
 relatively high (92\,\% compared to 84\,\% for turbine category 10), it causes
 the second longest downtime period based on \autoref{f4}, and it indicates a
-problem in the mechanical system, rather than electrical. 96-97\,\% of
+problem in the mechanical system, rather than electrical. 96--97\,\% of
 `normal' and 83\,\% of `curtailment' samples were classed correctly. In
-comparison, 43-44\,\% of `faulty' samples were classified correctly, with
-16-21\,\% misclassified as `curtailment' and 34-40\,\% misclassified as
+comparison, 43--44\,\% of `faulty' samples were classified correctly, with
+16--21\,\% misclassified as `curtailment' and 34--40\,\% misclassified as
 `normal'. The performance was better compared to turbine category 10, but the
 misclassification of the `faulty' class as `normal' is higher. Removing the
-`curtailment' increased the accuracy of `faulty' samples, from 43-44\,\% to
-48-55\,\%. However, the misclassification of this class as `normal' was still
-high (41-48\,\%).
+`curtailment' increased the accuracy of `faulty' samples, from 43--44\,\% to
+48--55\,\%. However, the misclassification of this class as `normal' was still
+high (41--48\,\%).
 
 Using a balanced dataset overall decreased the misclassification rate of `X
 hours before fault' classes as `normal', but increased the misclassification

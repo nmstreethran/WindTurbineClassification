@@ -113,14 +113,14 @@ as `normal'. These should be removed as they deviate from the typical power
 curve shape which indicates normal behaviour. To filter out the curtailment,
 the pitch angle should be within a typical threshold for `normal' data points
 between 10\,\% and 90\,\% power. Data points with power below 10\,\% and above
-90\,\% are not included, pitch angles often deviate from 0\,\textdegree~ in
+90\,\% are not included, pitch angles often deviate from 0\,\textdegree\ in
 these operating regions, due to the control of the turbine. To find this
-threshold, the most frequent pitch angles are quantified, with 0\,\textdegree~
+threshold, the most frequent pitch angles are quantified, with 0\,\textdegree\
 being the most frequent. Filtering out points with a pitch angle exceeding
 0\,\textdegree~, however, distorts the power curve shape, removing a large
 portion of points in the region where it transitions to rated power. To
-prevent this, pitch angles between 0\,\textdegree~ and 10\,\textdegree~ were
-tested as the threshold, with 3.5\,\textdegree~ producing the best result (see
+prevent this, pitch angles between 0\,\textdegree\ and 10\,\textdegree\ were
+tested as the threshold, with 3.5\,\textdegree\ producing the best result (see
 \autoref{a1} for full results). The effects of applying this filter can be
 seen in \autoref{f1b}, which still has anomalous points below 10\,\% and above
 90\,\% power. To remove these, additional filters are applied to `normal' data
@@ -148,7 +148,7 @@ all 25 turbines. The result of applying these filters is shown in
     \centering
     \includegraphics[height=5cm]{../images/f1b}
     \caption{\label{f1b}Without curtailment (\textit{i.e.} pitch angle is between
-    0\,\textdegree~ and 3.5\,\textdegree~ for `normal' data points between
+    0\,\textdegree\ and 3.5\,\textdegree\ for `normal' data points between
     10\,\% power and 90\,\% power).}
   \end{subfigure}
   \begin{subfigure}[t]{.5\textwidth}
