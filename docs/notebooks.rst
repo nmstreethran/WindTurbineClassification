@@ -1,9 +1,11 @@
 Notebooks
 =========
 
+Contents
+--------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    notebooks/processing
    notebooks/optimisation

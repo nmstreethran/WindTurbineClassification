@@ -1,4 +1,4 @@
-"""Results for kNN classifier
+"""Results for k-NN classifier
 
 Multilabel classification with imbalanced data
 """

@@ -18,6 +18,9 @@ This work is derived from `Nithiya Streethran <https://github.com/nmstreethran>`
 .. important::
    Unfortunately, the datasets are proprietary industry data and I do not own the rights to distribute them to the public. Please do not contact me to request the datasets.
 
+Contents
+--------
+
 .. toctree::
    :maxdepth: 2
 

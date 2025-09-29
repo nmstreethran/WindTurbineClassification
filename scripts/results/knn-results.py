@@ -1,4 +1,4 @@
-"""kNN classifier results"""
+"""k-NN classifier results"""
 
 import numpy as np
 import pandas as pd
