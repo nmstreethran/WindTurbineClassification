@@ -7,8 +7,8 @@ by Nithiya Streethran
 
 - GitHub: https://github.com/nmstreethran/WindTurbineClassification
 - Docs: https://nmstreethran.github.io/WindTurbineClassification
-- Zenodo DOI: `10.5281/zenodo.2875795 <https://doi.org/10.5281/zenodo.2875795>`_
-- PDF report: `nms_dissertation.pdf <https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf>`_
+- Report: `Online <https://nmstreethran.github.io/WindTurbineClassification/report.html>`_, `PDF <https://raw.githubusercontent.com/nmstreethran/WindTurbineClassification/current/docs/nms_dissertation.pdf>`_
+- DOI: `10.5281/zenodo.2875795 <https://doi.org/10.5281/zenodo.2875795>`_
 
 Abstract
 --------
@@ -470,8 +470,8 @@ done [25]_.
 
 A number of performance metrics are available on scikit-learn to assess
 classifier performance [26]_. Precision is the ratio of true positives,
-:math:`tp` to the sum of :math:`tp` and false positives, :math:`fp`, as shown in
-Equation 1. Equation 2 describes recall, which is the ratio of :math:`tp`
+:math:`tp` to the sum of :math:`tp` and false positives, :math:`fp`, as shown
+in Equation 1. Equation 2 describes recall, which is the ratio of :math:`tp`
 to the sum of :math:`tp` and false negatives, :math:`fn` [27]_. The F1 score,
 shown in Equation 3, is the harmonic average of precision and
 recall [28]_. The reason for not using accuracy is because it does not
@@ -504,7 +504,8 @@ averaged for each turbine or fault to produce a final score.
 .. math::
 
    \label{eq3}
-     \textrm{F1~score} = 2 \times \frac{\textrm{precision} \times \textrm{recall}}{\textrm{precision} + \textrm{recall}}
+     \textrm{F1~score} = 2 \times \frac{\textrm{precision} \times
+     \textrm{recall}}{\textrm{precision} + \textrm{recall}}
 
 The classification is carried out as a process. The first step is to use
 cross-validation to optimise some initial hyperparameters of the
@@ -970,8 +971,8 @@ curves for turbine 1 used in selecting the pitch angle threshold.
 In **Figure A1b**, data
 points with a pitch angle not equal to 0 ° between 90 % and 10 % power
 were filtered out, which distorts the power curve shape.
-In **Figure A1c**, all data points have a pitch angle between 0 ° and 3.5 °, which
-removes most curtailment and anomalous points while maintaining the
+In **Figure A1c**, all data points have a pitch angle between 0 ° and 3.5 °,
+which removes most curtailment and anomalous points while maintaining the
 typical power curve shape.
 In **Figure A1d**, all data points have a
 pitch angle between 0 ° and 7 °, which allows some curtailment points to
@@ -1150,7 +1151,7 @@ References
 
 .. [30] Rudy, J. (2013). `Plotting feature importance - Py-earth 0.1.0 documentation <https://contrib.scikit-learn.org/py-earth/auto_examples/plot_feature_importance.html>`__.
 
-.. [31] Gutierrez-Osuna, R. (n.d.). L8: Nearest neighbors - CSCE 666 Pattern Analysis. CSE@TAMU.
+.. [31] Gutierrez-Osuna, R. (n.d.). L8: Nearest neighbors - CSCE 666 Pattern Analysis. CSE @ TAMU.
 
 .. [32] Maitra, R. (n.d.). Distribution-free Predictive Approaches.
 
