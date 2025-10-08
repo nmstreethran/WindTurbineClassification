@@ -1,0 +1,47 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "docs",
+            "type": "shell",
+            "command": "source .venv/bin/activate && cd docs && make html",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "docs-clean",
+            "type": "shell",
+            "command": "source .venv/bin/activate && cd docs && make clean html",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "ruff",
+            "type": "shell",
+            "command": "source .venv/bin/activate && ruff check --select I --fix && ruff format",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test"
+            }
+        },
+        {
+            "label": "prune-remote",
+            "type": "shell",
+            "command": "git fetch --prune",
+            "problemMatcher": []
+        },
+        {
+            "label": "prune-local",
+            "type": "shell",
+            "command": "git prune --verbose",
+            "problemMatcher": []
+        }
+    ]
+}

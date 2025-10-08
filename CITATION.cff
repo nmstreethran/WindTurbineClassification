@@ -1,0 +1,37 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Specification of 'normal' wind turbine operating behaviour for rapid anomaly
+  detection: through the use of machine learning algorithms
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - family-names: Streethran
+    given-names: Nithiya
+    orcid: 'https://orcid.org/0000-0003-0575-5798'
+    affiliation: Environmental Protection Agency (EPA) Ireland
+repository-code: 'https://github.com/nmstreethran/WindTurbineClassification'
+url: 'https://nmstreethran.github.io/WindTurbineClassification/'
+keywords:
+  - wind turbine
+  - condition monitoring
+  - SCADA
+  - fault prediction
+  - classification algorithm
+license: MIT
+version: 1.2.0
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Streethran
+      given-names: Nithiya
+      orcid: 'https://orcid.org/0000-0003-0575-5798'
+      affiliation: Heriot-Watt University
+  title: >-
+    Specification of 'normal' wind turbine operating behaviour for rapid
+    anomaly detection: through the use of machine learning algorithms
+  doi: 10.5281/zenodo.2875795
+  year: 2017
+  month: 8

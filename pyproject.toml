@@ -25,7 +25,7 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Natural Language :: English",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.11",
   "Topic :: Scientific/Engineering",
 ]
 
@@ -35,10 +35,7 @@ docs = [
   "pydata-sphinx-theme",
 ]
 test = [
-  "black[jupyter]",
-  "flake8",
-  "pylint",
-  "nbqa[toolchain]",
+  "ruff",
 ]
 
 [project.urls]
@@ -46,9 +43,6 @@ Documentation = "https://nmstreethran.github.io/WindTurbineClassification"
 Repository = "https://github.com/nmstreethran/WindTurbineClassification.git"
 Issues = "https://github.com/nmstreethran/WindTurbineClassification/issues"
 Zenodo = "https://doi.org/10.5281/zenodo.2875795"
-
-[tool.black]
-line-length = 79
 
 [tool.ruff]
 line-length = 79

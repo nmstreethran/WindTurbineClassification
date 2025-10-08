@@ -3,9 +3,6 @@ matplotlib
 pandas
 jupyterlab
 openpyxl
-black[jupyter]
-pylint
-flake8
-nbqa[toolchain]
+ruff
 myst-nb
 pydata-sphinx-theme
